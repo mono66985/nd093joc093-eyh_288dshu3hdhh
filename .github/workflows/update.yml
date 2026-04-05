@@ -1,8 +1,8 @@
-name: Update Filter (Optimized)
+name: Update Filter (Fixed)
 
 on:
   schedule:
-    - cron: "0 */6 * * *"   # 6시간마다
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 jobs:
@@ -17,31 +17,30 @@ jobs:
         run: |
           curl -L "https://raw.githubusercontent.com/hooray804/adguard-gallery-filter/main/filter.txt" -o source.txt
 
-      - name: Process filter (remove exceptions + optimize)
+      - name: Process filter
         run: |
-          # 1. 예외 규칙 제거
           grep -Ev '^(@@|.*#@#|.*\$badfilter)' source.txt > step1.txt
-
-          # 2. 빈 줄 제거 + 앞뒤 공백 제거
           sed 's/^[ \t]*//;s/[ \t]*$//' step1.txt | grep -v '^$' > step2.txt
-
-          # 3. 중복 제거 (정렬 기반)
           sort -u step2.txt > filter.txt
 
-      - name: Check for changes
-        id: diff
-        run: |
-          if [ -f filter.txt ] && git diff --quiet filter.txt; then
-            echo "changed=false" >> $GITHUB_OUTPUT
-          else
-            echo "changed=true" >> $GITHUB_OUTPUT
-          fi
-
       - name: Commit & push if changed
-        if: steps.diff.outputs.changed == 'true'
         run: |
           git config --global user.name "bot"
           git config --global user.email "bot@users.noreply.github.com"
-          git add filter.txt
-          git commit -m "Auto update filter"
-          git push
+
+          # 파일 없으면 무조건 커밋
+          if [ ! -f filter.txt ]; then
+            git add filter.txt
+            git commit -m "Initial filter"
+            git push
+            exit 0
+          fi
+
+          # 변경 확인
+          if git diff --quiet filter.txt; then
+            echo "No changes"
+          else
+            git add filter.txt
+            git commit -m "Update filter"
+            git push
+          fi
