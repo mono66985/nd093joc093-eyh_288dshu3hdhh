@@ -15,7 +15,11 @@ jobs:
 
       - name: Generate filter
         run: |
-          curl -s https://raw.githubusercontent.com/hooray804/adguard-gallery-filter/main/filter.txt > source.txt
+          # upstream 다운로드 (실패 시 바로 중단)
+          curl -f -s https://raw.githubusercontent.com/hooray804/adguard-gallery-filter/main/filter.txt > source.txt
+
+          # 출력 폴더 생성
+          mkdir -p filters
 
           # 헤더 생성
           echo "! Title: Custom AdGuard Filter (Auto Extract)" > filters/custom.txt
@@ -23,31 +27,40 @@ jobs:
           echo "! Version: $(date +'%Y.%m.%d')" >> filters/custom.txt
           echo "! TimeUpdated: $(date --iso-8601=seconds)" >> filters/custom.txt
           echo "! Expires: 1 days" >> filters/custom.txt
-          echo "! Homepage: https://github.com/USER/REPO" >> filters/custom.txt
+          echo "! Homepage: https://github.com/hooray804/adguard-gallery-filter" >> filters/custom.txt
           echo "" >> filters/custom.txt
 
+          # 필터 정제
           awk '
           BEGIN { skip=0 }
 
+          # Incorrect blocking 섹션 시작 → skip
           /^! *Incorrect blocking/ { skip=1; next }
 
+          # 다른 섹션 나오면 skip 종료
           /^!/ {
               if (skip==1) skip=0
               next
           }
 
+          # skip 중이면 무시
           skip==1 { next }
 
+          # 차단 예외 제거
           /^@@/ { next }
           /#@#/ { next }
           /\$badfilter/ { next }
 
+          # 빈 줄 제거
           NF == 0 { next }
 
+          # 나머지 출력
           { print }
+
           ' source.txt >> filters/custom.txt
 
-          if ! grep -q "[^![:space:]]" filters/custom.txt; then
+          # 완전 빈 필터 방지 (헤더만 있는 경우 대비)
+          if ! grep -q '[^![:space:]]' filters/custom.txt; then
             echo "! empty" >> filters/custom.txt
           fi
 
