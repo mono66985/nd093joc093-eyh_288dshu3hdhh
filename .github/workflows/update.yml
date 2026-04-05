@@ -16,15 +16,40 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
 
-      - name: Generate filter
+      - name: Fetch upstream
         run: |
           set -e
-
           curl -f -s https://raw.githubusercontent.com/hooray804/adguard-gallery-filter/main/filter.txt > source.txt
 
+      - name: Check upstream change (hash)
+        id: check
+        run: |
+          NEW_HASH=$(sha256sum source.txt | awk '{print $1}')
+          echo "new_hash=$NEW_HASH" >> $GITHUB_OUTPUT
+
+          if [ -f .last_hash ]; then
+            OLD_HASH=$(cat .last_hash)
+          else
+            OLD_HASH=""
+          fi
+
+          if [ "$NEW_HASH" = "$OLD_HASH" ]; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Stop if no change
+        if: steps.check.outputs.changed == 'false'
+        run: |
+          echo "No upstream changes. Skipping."
+          exit 0
+
+      - name: Generate filter
+        if: steps.check.outputs.changed == 'true'
+        run: |
           mkdir -p filters
 
-          # ===== AdGuard 인식용 헤더 (중요) =====
           {
             echo "! Title: Custom AdGuard Filter (Optimized)"
             echo "! Description: Rule-based filtering (safe)"
@@ -36,7 +61,6 @@ jobs:
             echo ""
           } > filters/custom.txt
 
-          # ===== 1차 필터링 =====
           awk '
           BEGIN { in_if=0 }
 
@@ -54,7 +78,6 @@ jobs:
           { print }
           ' source.txt > filters/tmp1.txt
 
-          # ===== 2차: 조건부 보호 + 중복 제거 =====
           awk '
           BEGIN { in_if=0 }
 
@@ -68,19 +91,20 @@ jobs:
 
           rm -f filters/tmp1.txt
 
-          # ===== 완전 빈 필터 방지 =====
-          if ! grep -q "[^![:space:]]" filters/custom.txt; then
-            echo "! empty" >> filters/custom.txt
-          fi
+      - name: Save new hash
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          echo "${{ steps.check.outputs.new_hash }}" > .last_hash
 
       - name: Commit & push
+        if: steps.check.outputs.changed == 'true'
         run: |
           git config --global user.name "bot"
           git config --global user.email "bot@users.noreply.github.com"
 
-          git add filters/custom.txt
+          git add filters/custom.txt .last_hash
 
           if ! git diff --cached --quiet; then
-            git commit -m "auto update filter (final)"
+            git commit -m "auto update filter (upstream changed)"
             git push
           fi
