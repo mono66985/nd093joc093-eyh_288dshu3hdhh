@@ -1,8 +1,6 @@
-name: Update Filter (Fixed)
+name: Update Filter (Force Create)
 
 on:
-  schedule:
-    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 jobs:
@@ -23,24 +21,17 @@ jobs:
           sed 's/^[ \t]*//;s/[ \t]*$//' step1.txt | grep -v '^$' > step2.txt
           sort -u step2.txt > filter.txt
 
-      - name: Commit & push if changed
+      - name: Debug (파일 확인)
+        run: |
+          ls -al
+          echo "==== filter.txt preview ===="
+          head -n 20 filter.txt
+
+      - name: Commit & Push (강제)
         run: |
           git config --global user.name "bot"
           git config --global user.email "bot@users.noreply.github.com"
 
-          # 파일 없으면 무조건 커밋
-          if [ ! -f filter.txt ]; then
-            git add filter.txt
-            git commit -m "Initial filter"
-            git push
-            exit 0
-          fi
-
-          # 변경 확인
-          if git diff --quiet filter.txt; then
-            echo "No changes"
-          else
-            git add filter.txt
-            git commit -m "Update filter"
-            git push
-          fi
+          git add filter.txt
+          git commit -m "Force update filter" || echo "no changes"
+          git push
