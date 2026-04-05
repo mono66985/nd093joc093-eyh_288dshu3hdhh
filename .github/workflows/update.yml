@@ -9,66 +9,99 @@ jobs:
   update:
     runs-on: ubuntu-latest
 
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Generate filter
         run: |
+          set -e
+
           curl -f -s https://raw.githubusercontent.com/hooray804/adguard-gallery-filter/main/filter.txt > source.txt
 
           mkdir -p filters
 
           # 헤더 생성
-          echo "! Title: Custom AdGuard Filter (Auto Extract)" > filters/custom.txt
-          echo "! Description: Preserve conditional blocks & CSS injection" >> filters/custom.txt
-          echo "! Version: $(date +'%Y.%m.%d')" >> filters/custom.txt
-          echo "! TimeUpdated: $(date --iso-8601=seconds)" >> filters/custom.txt
-          echo "! Expires: 1 days" >> filters/custom.txt
-          echo "! Homepage: https://github.com/hooray804/adguard-gallery-filter" >> filters/custom.txt
-          echo "" >> filters/custom.txt
+          {
+            echo "! Title: Custom AdGuard Filter (Optimized)"
+            echo "! Description: Rule-based filtering (safe)"
+            echo "! Version: $(date +'%Y.%m.%d')"
+            echo "! TimeUpdated: $(date --iso-8601=seconds)"
+            echo "! Expires: 1 days"
+            echo "! Homepage: https://github.com/hooray804/adguard-gallery-filter"
+            echo ""
+          } > filters/custom.txt
 
+          # 1차 필터링 (규칙 기준)
           awk '
-          BEGIN { skip=0 }
+          BEGIN { in_if=0 }
 
-          # 1. Incorrect blocking 블록 제거
-          /^! *Incorrect blocking/ { skip=1; next }
-
-          # 2. 다른 섹션 시작 시 skip 종료
-          /^!/ {
-              if ($0 ~ /^!#if/ || $0 ~ /^!#endif/) {
-                  # 조건부 블록은 유지
-                  if (skip==0) print
-                  next
-              }
-
-              if (skip==1) {
-                  skip=0
-                  next
-              }
-
-              # 일반 주석은 제거
+          # 조건부 시작
+          /^!#if/ {
+              in_if=1
+              print
               next
           }
 
-          # 3. skip 중이면 무시
-          skip==1 { next }
+          # 조건부 종료
+          /^!#endif/ {
+              in_if=0
+              print
+              next
+          }
 
-          # 4. 화이트리스트 제거
+          # 일반 주석 제거 (조건부 제외)
+          /^!/ {
+              next
+          }
+
+          # 화이트리스트 제거
           /^@@/ { next }
           /#@#/ { next }
           /\$badfilter/ { next }
 
-          # 5. 빈 줄 제거
+          # 빈 줄 제거
           NF == 0 { next }
 
-          # 6. 나머지 유지
+          # 나머지 유지 (여기서 #$# 포함됨)
           { print }
 
-          ' source.txt >> filters/custom.txt
+          ' source.txt > filters/tmp1.txt
+
+          # 2차 처리: 조건부 보호 + 중복 제거
+          awk '
+          BEGIN { in_if=0 }
+
+          /^!#if/ {
+              in_if=1
+              print
+              next
+          }
+
+          /^!#endif/ {
+              in_if=0
+              print
+              next
+          }
+
+          in_if==1 {
+              print
+              next
+          }
+
+          !seen[$0]++ {
+              print
+          }
+
+          ' filters/tmp1.txt > filters/custom.txt
+
+          rm -f filters/tmp1.txt
 
           # 빈 필터 방지
-          if ! grep -q '[^![:space:]]' filters/custom.txt; then
+          if ! grep -q "[^![:space:]]" filters/custom.txt; then
             echo "! empty" >> filters/custom.txt
           fi
 
@@ -78,5 +111,8 @@ jobs:
           git config --global user.email "bot@users.noreply.github.com"
 
           git add filters/custom.txt
-          git diff --cached --quiet || git commit -m "auto update filter"
-          git push
+
+          if ! git diff --cached --quiet; then
+            git commit -m "auto update filter (rule-based)"
+            git push
+          fi
