@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.04.09
-! TimeUpdated: 2026-04-09T13:46:43+00:00
+! Version: 2026.04.10
+! TimeUpdated: 2026-04-10T07:45:59+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -155,6 +155,7 @@ search.naver.com##.api_subject_bx div:has(.fds-aib-answer-expand-button-wrapper)
 cafe.naver.com##+js(remove-class, disable-select, #ct)
 fmkorea.com##+js(set, link_url, '')
 manatoki469.net,manatoki470.net,newtoki469.com,newtoki470.com##+js(acis, oncontextmenu)
+novelpia.com###slide-layer
 ||arca.live/static/assets/js/adult.min.js
 aagag.com##+js(set-cookie, ab, 0)
 aagag.com#$#.la { position: absolute !important; left: -3000px !important; width: 60px !important; height: 20px !important; }
