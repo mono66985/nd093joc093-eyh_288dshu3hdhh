@@ -65,7 +65,7 @@ def normalize_line(line):
     if not line or line.startswith(('!', '#')):
         return None
     
-    # 2. 예외 규칙(@@)은 옵션 손상 없이 무조건 1순위로 반환
+    # 2. 예외 규칙(@@)은 무조건 1순위로 반환
     if line.startswith('@@'):
         return line
 
@@ -78,14 +78,12 @@ def normalize_line(line):
     if re.match(r'^[a-zA-Z0-9-]+\.[a-zA-Z0-9.-]+$', line):
         return f"||{line}^"
 
-    # 5. AdGuard Home에 불필요한 브라우저 옵션 제거 ($dnsrewrite 등은 보존)
-    if '$dnsrewrite' not in line:
-        line = re.sub(r'\$.*$', '', line)
-
+    # 5. 원본 옵션($denyallow, $important 등) 훼손 절대 금지! 원본 그대로 반환
     return line
 
 def extract_pure_domain(rule):
-    match = re.search(r'^\|\|([a-zA-Z0-9.-]+)\^$', rule)
+    # 옵션($...)이 뒤에 붙어있거나 와일드카드(*)가 있어도 도메인 부분만 정확히 추출하도록 개선
+    match = re.search(r'^\|\|([a-zA-Z0-9.*-]+)\^', rule)
     return match.group(1) if match else None
 
 def prune_subdomains(block_rules):
@@ -111,7 +109,7 @@ def fetch_url(url):
         with urllib.request.urlopen(req) as res:
             for line in res.read().decode('utf-8').splitlines():
                 norm = normalize_line(line)
-                if norm and not norm.startswith('@@'):  # 원격 파일의 예외규칙은 무시 (안전성)
+                if norm and not norm.startswith('@@'):  # 원격 파일의 예외규칙은 무시 (내 커스텀만 신뢰)
                     rules.add(norm)
     except Exception as e:
         print(f"오류 {url}: {e}")
@@ -119,7 +117,7 @@ def fetch_url(url):
 
 def fetch_and_process_concurrently(urls):
     rules = set()
-    # 멀티스레딩으로 다운로드 속도 10배 향상
+    # 멀티스레딩으로 다운로드 속도 대폭 향상
     with ThreadPoolExecutor(max_workers=10) as executor:
         results = executor.map(fetch_url, urls)
         for res in results:
@@ -144,8 +142,8 @@ def main():
                 if norm and norm.startswith('@@'):
                     whitelist_rules.add(norm)
 
-    # 화이트리스트에 있는 도메인을 차단 목록에서 아예 삭제 (충돌 방지)
-    w_domains = {re.search(r'@@\|\|([a-zA-Z0-9.-]+)\^', w).group(1) for w in whitelist_rules if re.search(r'@@\|\|([a-zA-Z0-9.-]+)\^', w)}
+    # 화이트리스트에 있는 도메인을 차단 목록에서 아예 삭제 (충돌 원천 봉쇄)
+    w_domains = {re.search(r'@@\|\|([a-zA-Z0-9.*-]+)\^', w).group(1) for w in whitelist_rules if re.search(r'@@\|\|([a-zA-Z0-9.*-]+)\^', w)}
     
     base_rules_raw = {r for r in base_rules_raw if extract_pure_domain(r) not in w_domains}
     xtra_rules_raw = {r for r in xtra_rules_raw if extract_pure_domain(r) not in w_domains}
