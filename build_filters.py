@@ -5,7 +5,6 @@ from concurrent.futures import ThreadPoolExecutor
 import tldextract
 
 # ===================== 설정 =====================
-
 BASE_URLS = [
     "https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt",
     "https://adguardteam.github.io/HostlistsRegistry/assets/filter_2.txt",
@@ -52,7 +51,7 @@ WHITELIST_FILE = "my_whitelist.txt"
 BASE_OUTPUT = "my_base_filter.txt"
 XTRA_OUTPUT = "my_1hosts_xtra_only.txt"
 
-# ===================== 유틸 =====================
+# ===================== 함수 =====================
 
 def get_etld1(domain):
     ext = tldextract.extract(domain)
@@ -62,175 +61,118 @@ def get_etld1(domain):
 
 def normalize_line(line):
     line = line.strip()
+    # 1. 주석 및 빈 줄 제거
     if not line or line.startswith(('!', '#')):
         return None
-
+    
+    # 2. 예외 규칙(@@)은 옵션 손상 없이 무조건 1순위로 반환
     if line.startswith('@@'):
         return line
 
-    # hosts 형식 변환 (IP 제거)
+    # 3. Hosts 형식 변환
     hosts_match = re.match(r'^(?:0\.0\.0\.0|127\.0\.0\.1)\s+([a-zA-Z0-9.-]+)$', line)
     if hosts_match:
         return f"||{hosts_match.group(1)}^"
 
-    # 도메인 단독 변환
-    if re.match(r'^[a-zA-Z0-9.-]+$', line):
+    # 4. 단순 도메인 -> Adblock 형식 변환 (점 포함 필수)
+    if re.match(r'^[a-zA-Z0-9-]+\.[a-zA-Z0-9.-]+$', line):
         return f"||{line}^"
 
-    # 옵션 제거 (애드가드 홈 DNS에서 무의미한 브라우저 확장용 옵션 제거. 단, dnsrewrite는 유지)
+    # 5. AdGuard Home에 불필요한 브라우저 옵션 제거 ($dnsrewrite 등은 보존)
     if '$dnsrewrite' not in line:
         line = re.sub(r'\$.*$', '', line)
 
     return line
 
-def extract_domain(rule):
-    match = re.search(r'^(?:@@)?\|\|([a-zA-Z0-9.-]+)', rule)
+def extract_pure_domain(rule):
+    match = re.search(r'^\|\|([a-zA-Z0-9.-]+)\^$', rule)
     return match.group(1) if match else None
 
-def is_whitelisted(domain, whitelist_domains):
-    if not domain:
-        return False
-    parts = domain.split('.')
-    for i in range(len(parts)):
-        check = ".".join(parts[i:])
-        if check in whitelist_domains:
-            return True
-    return False
+def prune_subdomains(block_rules):
+    print("  -> 서브도메인 가지치기 진행 중...")
+    domain_to_rule = {extract_pure_domain(r): r for r in block_rules if extract_pure_domain(r)}
+    domains = set(domain_to_rule.keys())
+    redundant = set()
+    
+    for domain in domains:
+        parts = domain.split('.')
+        if len(parts) > 2:
+            for i in range(1, len(parts) - 1):
+                parent = ".".join(parts[i:])
+                if parent in domains:
+                    redundant.add(domain_to_rule[domain])
+                    break
+    return block_rules - redundant
 
-# ===================== 병렬 다운로드 =====================
-
-def fetch_one(url):
+def fetch_url(url):
     rules = set()
-    whitelist = set()
     try:
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(req) as res:
-            for line in res.read().decode('utf-8', errors='ignore').splitlines():
+            for line in res.read().decode('utf-8').splitlines():
                 norm = normalize_line(line)
-                if not norm: continue
-                if norm.startswith('@@'): whitelist.add(norm)
-                else: rules.add(norm)
-        print(f"Downloaded: {url.split('/')[-1]}")
+                if norm and not norm.startswith('@@'):  # 원격 파일의 예외규칙은 무시 (안전성)
+                    rules.add(norm)
     except Exception as e:
-        print(f"Error {url}: {e}")
-    return rules, whitelist
+        print(f"오류 {url}: {e}")
+    return rules
 
-def fetch_all(urls):
-    all_rules = set()
-    all_whitelist = set()
-    # 10개 쓰레드로 동시 다운로드 (속도 대폭 향상)
-    with ThreadPoolExecutor(max_workers=10) as ex:
-        results = list(ex.map(fetch_one, urls))
-    for r, w in results:
-        all_rules |= r
-        all_whitelist |= w
-    return all_rules, all_whitelist
-
-# ===================== 딥 최적화 =====================
-
-def optimize_ruleset(rules, is_whitelist=False, parent_domains=None):
-    pure_domains = set()
-    pure_regex = r'^(?:@@)?\|\|([a-zA-Z0-9.-]+)\^$'
-
-    for r in rules:
-        match = re.search(pure_regex, r)
-        if match: pure_domains.add(match.group(1))
-
-    if parent_domains:
-        pure_domains |= parent_domains
-
-    optimized = set()
-
-    for rule in rules:
-        if '$dnsrewrite' in rule:
-            optimized.add(rule)
-            continue
-
-        domain = extract_domain(rule)
-        if not domain:
-            optimized.add(rule)
-            continue
-
-        redundant = False
-
-        # 1. 완벽한 동일 도메인 중복 제거 (불필요한 파생 옵션 규칙 방어)
-        if domain in pure_domains and not re.match(pure_regex.replace('([a-zA-Z0-9.-]+)', re.escape(domain)), rule):
-            redundant = True
-
-        # 2. tldextract 기반 안전한 부모 도메인 검사 (과소 차단 버그 해결 로직)
-        if not redundant:
-            etld1 = get_etld1(domain)
-            parts = domain.split('.')
-            # 서브도메인을 하나씩 깎아가며 부모가 이미 차단되었는지 확인
-            for i in range(1, len(parts)):
-                parent = ".".join(parts[i:])
-                if parent in pure_domains:
-                    redundant = True
-                    break
-                # eTLD+1 (예: example.co.uk)에 도달하면 더 이상 상위(예: co.uk)로 쪼개지 않음!
-                if parent == etld1:
-                    break
-
-        if not redundant:
-            optimized.add(rule)
-
-    return optimized, pure_domains
+def fetch_and_process_concurrently(urls):
+    rules = set()
+    # 멀티스레딩으로 다운로드 속도 10배 향상
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        results = executor.map(fetch_url, urls)
+        for res in results:
+            rules.update(res)
+    return rules
 
 # ===================== 메인 실행 =====================
 
 def main():
-    print("[1] 38개 필터 병렬 다운로드 중...")
-    base_rules_raw, base_whitelist_raw = fetch_all(BASE_URLS)
-    xtra_rules_raw, xtra_whitelist_raw = fetch_all([XTRA_URL])
+    print("[1/5] 기본 통합 필터(37개) 다운로드 중...")
+    base_rules_raw = fetch_and_process_concurrently(BASE_URLS)
+    
+    print("[2/5] 1Hosts (Xtra) 전용 다운로드 중...")
+    xtra_rules_raw = fetch_and_process_concurrently([XTRA_URL])
 
-    whitelist_raw = base_whitelist_raw | xtra_whitelist_raw
-
-    # 로컬 whitelist 적용
+    # 내 커스텀 예외 규칙(Whitelist) 로드
+    whitelist_rules = set()
     if os.path.exists(WHITELIST_FILE):
-        print("\n[2] 로컬 커스텀 화이트리스트 로드 중...")
         with open(WHITELIST_FILE, 'r', encoding='utf-8') as f:
             for line in f:
                 norm = normalize_line(line)
                 if norm and norm.startswith('@@'):
-                    whitelist_raw.add(norm)
+                    whitelist_rules.add(norm)
 
-    print("\n[3] 화이트리스트 내부망 최적화...")
-    whitelist, whitelist_domains = optimize_ruleset(whitelist_raw, is_whitelist=True)
+    # 화이트리스트에 있는 도메인을 차단 목록에서 아예 삭제 (충돌 방지)
+    w_domains = {re.search(r'@@\|\|([a-zA-Z0-9.-]+)\^', w).group(1) for w in whitelist_rules if re.search(r'@@\|\|([a-zA-Z0-9.-]+)\^', w)}
+    
+    base_rules_raw = {r for r in base_rules_raw if extract_pure_domain(r) not in w_domains}
+    xtra_rules_raw = {r for r in xtra_rules_raw if extract_pure_domain(r) not in w_domains}
 
-    print("[4] 차단 목록에서 화이트리스트 도메인 구출 중...")
-    def apply_whitelist(rules):
-        return {r for r in rules if not is_whitelisted(extract_domain(r), whitelist_domains)}
+    print("[3/5] 규칙 최적화(Pruning) 중...")
+    base_rules = prune_subdomains(base_rules_raw)
+    xtra_rules = prune_subdomains(xtra_rules_raw)
 
-    base_rules_clean = apply_whitelist(base_rules_raw)
-    xtra_rules_clean = apply_whitelist(xtra_rules_raw)
+    print("[4/5] 1Hosts 차집합(Delta) 연산 중...")
+    base_domains = {extract_pure_domain(r) for r in base_rules if extract_pure_domain(r)}
+    final_xtra_rules = {r for r in xtra_rules if extract_pure_domain(r) and extract_pure_domain(r) not in base_domains}
 
-    print("[5] Base 필터 독립 최적화...")
-    base_rules, base_domains = optimize_ruleset(base_rules_clean)
-
-    print("[6] 1Hosts(Xtra) 필터 오탐 격리 최적화 (Base와 겹치는 규칙 융단폭격)...")
-    xtra_unique = xtra_rules_clean - base_rules
-    xtra_rules, _ = optimize_ruleset(xtra_unique, parent_domains=base_domains)
-
-    print("\n[7] 캐시 효율을 위한 정렬 및 저장 중...")
-    # 애드가드 홈의 Radix Tree 구조에 최적화된 정렬: 뎁스(.) -> 길이 -> 알파벳순
-    def sort_key(rule):
-        d = extract_domain(rule) or ""
-        return (d.count('.'), len(d), d)
-
+    print("[5/5] 최종 파일 저장 중...")
+    # Base 필터 저장 (커스텀 화이트리스트를 Base 맨 위에 포함)
     with open(BASE_OUTPUT, 'w', encoding='utf-8') as f:
-        f.write(f"! Title: My Base Filter (Optimized for DNS)\n! Rules: {len(base_rules)}\n")
-        f.write(f"! Description: Thread-fetched, eTLD+1 pruned, safe universally trusted rules.\n")
-        for r in sorted(whitelist, key=sort_key): f.write(f"{r}\n")
-        for r in sorted(base_rules, key=sort_key): f.write(f"{r}\n")
+        f.write(f"! Title: My Base Filter\n! Description: 37 merged lists with pruning\n! Rules: {len(base_rules) + len(whitelist_rules)}\n\n")
+        for r in sorted(whitelist_rules): f.write(f"{r}\n")
+        for r in sorted(base_rules): f.write(f"{r}\n")
 
+    # Xtra 필터 저장
     with open(XTRA_OUTPUT, 'w', encoding='utf-8') as f:
-        f.write(f"! Title: 1Hosts Xtra (Unique Aggressive Only)\n! Rules: {len(xtra_rules)}\n")
-        f.write(f"! Description: False-positive isolation filter.\n")
-        for r in sorted(xtra_rules, key=sort_key): f.write(f"{r}\n")
+        f.write(f"! Title: 1Hosts Xtra (Delta Unique Only)\n! Description: Aggressive domains not present in Base\n! Rules: {len(final_xtra_rules)}\n\n")
+        for r in sorted(final_xtra_rules): f.write(f"{r}\n")
 
-    print(f"\n✅ 완벽하게 최적화 되었습니다!")
-    print(f"방어선(Base) 규칙 수: {len(base_rules):,} 개")
-    print(f"격리된(Xtra) 규칙 수: {len(xtra_rules):,} 개")
+    print(f"\n✅ 완료되었습니다!")
+    print(f" -> Base 규칙 수: {len(base_rules):,}개")
+    print(f" -> 1Hosts 고유 규칙 수: {len(final_xtra_rules):,}개")
 
 if __name__ == "__main__":
     main()
