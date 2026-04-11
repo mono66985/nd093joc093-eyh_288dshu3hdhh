@@ -1,4 +1,4 @@
-name: AdGuard Filters Auto Build
+name: AdGuard Home Filters Auto Build
 
 # 언제 스크립트를 실행할지 결정합니다.
 on:
