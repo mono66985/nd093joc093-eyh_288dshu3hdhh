@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.04.17
-! TimeUpdated: 2026-04-17T13:24:42+00:00
+! Version: 2026.04.18
+! TimeUpdated: 2026-04-18T13:07:33+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -116,6 +116,7 @@ teamblind.com##div.article:has(> [href^='https://link.coupang.com/re/AFFSDP'])
 teamblind.com##div.comment_area.wrap-comment[style='cursor: pointer;']
 torrentpi150.com##.h20 +.widget-box
 torrentpi150.com##div.col-sm-12 > .widget-box > .basic-post-gallery
+uppity.co.kr##.adrop-outer
 windowsforum.kr,seoul.co.kr,xportsnews.com##.ad
 wowtv.co.kr,cafe.naver.com##[class*='Banner']
 zod.kr##div:has(> [rel='sponsored'])
