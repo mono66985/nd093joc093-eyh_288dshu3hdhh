@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.04.28
-! TimeUpdated: 2026-04-28T03:28:06+00:00
+! TimeUpdated: 2026-04-28T19:44:33+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -70,6 +70,7 @@ inven.co.kr,mt.co.kr##[class$='ads']
 inven.co.kr,wowtv.co.kr,damoang.net##[class*='-banner']
 jusoya.com##div.banner-widget:has(a.secure-banner-link[data-original-url])
 k-hentai.org##.my-3.container
+khan.co.kr##div[class*="banner"]:has(div[class*="ad-wrapper"])
 litomi.in##[data-juicy-ads-slot]
 m.bobaedream.co.kr##div[style$='height:50px;']
 m.cafe.daum.net##[class*='_banner']
