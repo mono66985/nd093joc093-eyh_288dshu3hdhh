@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.05.04
-! TimeUpdated: 2026-05-04T14:06:56+00:00
+! TimeUpdated: 2026-05-04T19:43:34+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -56,6 +56,7 @@ etoland.co.kr,ppomppu.co.kr,m.ppomppu1.co.kr##[id$='_popup']
 fc-info.com##div[class^='Venatus_']
 fmkorea.com##[class$='_ad']
 gall.dcinside.com##.gnb_list.clear > li:has(> [onclick])
+get*ads-*-du.a.run.app^
 gmarket.co.kr##.js-impressionable.box__head-ad
 harpi.in##div:has(> script[src])
 hygall.com##div[style='display: flex;justify-content: center; width:100%;height:100px;']
@@ -73,11 +74,11 @@ m.bobaedream.co.kr##div[style$='height:50px;']
 m.cafe.daum.net##[class*='_banner']
 m.danawa.com###mdnw-main-dimm, #mdnw-main-bottomSheet-container
 m.daum.net###trendKeywordsContainer
-m.dcinside.com###notice_list > li
 m.dcinside.com##.layer-bottom-popup
 m.dcinside.com##.menu-scroll-lst.swiper-wrapper > li.swiper-slide:nth-of-type(n+5)
+m.dcinside.com##.survey
 m.dcinside.com##.view-btm-con
-m.dcinside.com#$##notice_list > li:has(.ct):not(:has(.ntc-line-pink.round)) { display: table !important; }
+m.dcinside.com##li:not(.notice):has(> .detail-top-lnk)
 m.ppomppu.co.kr##.js-ad_slot.JS-div_gpt_ad
 m.ppomppu.co.kr##div:has(> ins.adsbygoogle)
 m.ppomppu.co.kr##div[style^='text-align:center;']
@@ -128,7 +129,6 @@ wowtv.co.kr,cafe.naver.com##[class*='Banner']
 ydzone20.cc##ul.d-flex.flex-wrap:has(a[href*="/bbs/banner.php"])
 zod.kr##div:has(> [rel='sponsored'])
 ||*nestads.*
-||get*ads-*-du.a.run.app^
 ||ader.naver.com/*?c=m_$all
 ||dvdprime.com/file/*/banner
 ||kamp.kakao.com^$app=com.kakao.talk
