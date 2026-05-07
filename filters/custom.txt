@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.05.07
-! TimeUpdated: 2026-05-07T03:25:49+00:00
+! TimeUpdated: 2026-05-07T19:44:57+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -136,6 +136,7 @@ veritas-a.com##article.grid.body > div.clearfix:has(.ad-template)
 windowsforum.kr,seoul.co.kr,xportsnews.com##.ad
 wowtv.co.kr,cafe.naver.com##[class*='Banner']
 xxzone21.cc##ul.d-flex.flex-wrap:has(a[href*="/bbs/banner.php"])
+yozm.wishket.com##[data-testid^="advertisement-"], [data-testid="top-banner"]
 zod.kr##div:has(> [rel='sponsored'])
 ||*nestads.*
 ||ader.naver.com/*?c=m_$all
