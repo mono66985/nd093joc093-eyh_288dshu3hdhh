@@ -4,7 +4,7 @@ name: AdGuard Home Filters Auto Build
 on:
   schedule:
     # 매일 한국 시간 새벽 3시(UTC 기준 18:00)에 자동 실행
-    - cron: '47 18 * * *'
+    - cron: '19 17 * * *'
   workflow_dispatch:
     # 깃허브 웹페이지에서 수동으로 [Run workflow] 버튼을 눌러 실행할 수 있게 해줍니다.
 
