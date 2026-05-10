@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.05.09
-! TimeUpdated: 2026-05-09T19:05:44+00:00
+! Version: 2026.05.10
+! TimeUpdated: 2026-05-10T19:08:00+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -139,14 +139,14 @@ yozm.wishket.com##[data-testid^="advertisement-"], [data-testid="top-banner"]
 ||t*kor*.com/images/
 ||thumb.kakaocdn.net^$app=com.kakao.talk
 ||trillion.toss.im^
-bamgad6.com,bamgad7.com##ul.row:has(img[src*="/data/file/advertise/"])
+bamgad7.com,bamgad8.com##ul.row:has(img[src*="/file/advertise/"])
 bampt3.com,bampt4.com##.small-banners-grid, .small-ad-item
 darkgirl8.com,darkgirl9.com###adskip, #posterWrap, #main-banner
 darkgirl8.com,darkgirl9.com##.banner, a[href*="clickadu.net"]
 darkgirl8.com,darkgirl9.com%#%#//scriptlet('trusted-click-element', '#adbtn')
 jusocon1.com,jusocon2.com##.banner_box
 mingky13.net,ydparty06.net##div:is(.top-wrap, .mid-wrap, .bot-wrap):has(a.grid-asset[data-item-id])
-xxzone21.cc##ul.d-flex.flex-wrap:has(a[href*="/bbs/banner.php"])
+xxzone21.cc##[id*="main-banner"], .gplayer-ad-overlay, #popupBannerModal
 !#if (adguard && adguard_app_ios && adguard_ext_safari && adguard_ext_chromium && adguard_ext_edge && adguard_ext_firefox)
 ###img_row_container
 ###viewCover
