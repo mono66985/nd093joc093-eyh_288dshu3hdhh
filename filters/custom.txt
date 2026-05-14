@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.05.13
-! TimeUpdated: 2026-05-13T14:39:41+00:00
+! Version: 2026.05.14
+! TimeUpdated: 2026-05-14T03:37:40+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -28,6 +28,7 @@
 [$domain=/torrent[a-z0-9]*\.[a-z]{2,}/]##div[class$='gallery'][id] [target='_blank']:upward(1)
 [$domain=/torrentqq[0-9]*\.com/]##div.at-banner:has(a[href*="/ads/"])
 [$domain=/yadongtv[0-9]*\.[a-z]{2,}/]##div[style*="top: 215px"]:has(img[src*="/banners/"]), img[src*="/banners/"]
+a-ha.io##div[aria-label="advertisement"]
 algumon.com##div:has([data-tip^='파트너스'], div[style*='height'], ins):is(.card, .deal-2col)
 arca.live##.vrow.hybrid:has(.category-badge)
 auction.co.kr,gmarket.co.kr##.plcc_banner
