@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.05.15
-! TimeUpdated: 2026-05-15T08:51:34+00:00
+! TimeUpdated: 2026-05-15T14:11:35+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -134,6 +134,7 @@ yozm.wishket.com##[data-testid^="advertisement-"], [data-testid="top-banner"]
 ||dvdprime.com/file/*/banner
 ||kamp.kakao.com^$app=com.kakao.talk
 ||link.coupang.com/re/AFFHOME?lptag=*&amp;subid=pointlink$all,reason=수익링크
+||serv.ds.kakao.com^
 ||shortformstats.kakao.com^$app=com.kakao.talk
 ||t*kor*.com/images/
 ||thumb.kakaocdn.net^$app=com.kakao.talk
