@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.05.16
-! TimeUpdated: 2026-05-16T13:26:58+00:00
+! Version: 2026.05.17
+! TimeUpdated: 2026-05-17T03:39:50+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -102,6 +102,7 @@ orbi.kr##li.listAd
 pay.naver.com##div[class^='BottomAds_article']
 postype.com##div[data-sentry-component="RecommendFeedGoogleAd"]:upward(1)
 ppomppu.co.kr##.bottom > div[style]
+ppomppu.co.kr##tr[id*="_list_ad_"]
 ppomppu.co.kr$$tr:has-text(AD)
 ppomppu.co.kr,m.ppomppu1.co.kr##[id$='_popup']
 qquing.net,ibric.org##[class*="ad-wrap"]
