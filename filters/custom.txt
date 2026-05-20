@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.05.20
-! TimeUpdated: 2026-05-20T03:47:36+00:00
+! TimeUpdated: 2026-05-20T09:38:52+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -11,7 +11,6 @@
 ##.happy-under-player-mobile
 ##.textwidget
 ##[alt$='광고']
-##[aria-label='배너 광고']
 ##[class*='ad'][id^='AD']:not([class*='address'])
 ##[class^='basic-banner'][id]
 ##[class^='happy-header']
@@ -116,7 +115,6 @@ qquing.net,ibric.org##[class*="ad-wrap"]
 rgr.kr,rgrong.net,te31.com###foot:style(height: 150px !important;)
 rgr.kr,rgrong.net,te31.com##div[style='position:relative;z-index:11;']
 ruliweb.com,ppomppu.co.kr,naver.com,daum.net,etoland.co.kr##[id$='_ad']
-sbxh1.com##[aria-label*='배너']
 search.danawa.com##[id^='powerShoppingArea']
 search.danawa.com##li[data-itemtype='adsmart']
 section.blog.naver.com##.area_advertisement
@@ -157,6 +155,7 @@ darkgirl8.com,darkgirl9.com##.banner, a[href*="clickadu.net"]
 darkgirl8.com,darkgirl9.com%#%#//scriptlet('trusted-click-element', '#adbtn')
 jusocon1.com,jusocon2.com##.banner_box
 mingky13.net,ydparty06.net##div:is(.top-wrap, .mid-wrap, .bot-wrap):has(a.grid-asset[data-item-id])
+sbxh1.com,sbxh2.com,sbxh3.com##[aria-label*='배너']
 xxzone21.cc##[id*="main-banner"], .gplayer-ad-overlay, #popupBannerModal
 !#if (adguard && adguard_app_ios && adguard_ext_safari && adguard_ext_chromium && adguard_ext_edge && adguard_ext_firefox)
 ###img_row_container
@@ -194,6 +193,7 @@ search.naver.com##.api_subject_bx div:has(.fds-aib-answer-expand-button-wrapper)
 cafe.naver.com##+js(remove-class, disable-select, #ct)
 fmkorea.com##+js(set, link_url, '')
 ||arca.live/static/assets/js/adult.min.js
+/api/me/layout-settings
 aagag.com##+js(set-cookie, ab, 0)
 aagag.com#$#.la { position: absolute !important; left: -3000px !important; width: 60px !important; height: 20px !important; }
 kissjav.*##+js(rmnt, script, /contextmenu|ghost|localStorage|video\-ad\-overlay|admanager/i)
@@ -202,8 +202,8 @@ m.fmkorea.com##+js(set, _make_power_link_identifier, noopFunc)
 m.fmkorea.com##script ~ div.bd_mobile.bd:matches-css(margin: /[0-5]px [0-5]px/):matches-css(padding: /[0-5]px/):remove()
 m.fmkorea.com##section.fmWidgetStyle2019.bd_mobile.bd:matches-css(margin: /[0-5]px [0-5]px/):matches-css(padding: /[0-5]px/):remove()
 namu.wiki##div:has(img[data-doc]:not([data-doc^="/jump/"]):not([data-doc^="/w/"])):not(:has([id])), div:has(> div[id]:empty:only-child)
-sbxh1.com#%#(function(){const o=window.getComputedStyle;window.getComputedStyle=function(e,t){return e&&(e.hasAttribute("data-adblock-bait")||e.hasAttribute("data-adblock-root")||"1"===e.getAttribute("data-br"))?{display:"block",visibility:"visible",opacity:"1"}: o.apply(this,arguments)};const f=window.fetch;window.fetch=function(e,t){const u="string"==typeof e?e:e instanceof URL?e.href:e&&e.url?e.url:"";if(u.includes("/api/me/block-check"))return Promise.resolve(new Response(JSON.stringify({ok:!0,blocked:!1}),{headers:{"content-type":"application/json"}}));if(u.includes("/api/dev-block"))return Promise.resolve(new Response(JSON.stringify({ok:!0}),{headers:{"content-type":"application/json"}}));return f.apply(this,arguments)}})();
-sbxh1.com##div[style*="z-index"]:has(h2:contains("광고 차단 프로그램이 감지되었습니다"))
+sbxh1.com,sbxh2.com,sbxh3.com##+js(nosiif, , 700)
+sbxh1.com,sbxh2.com,sbxh3.com#%#(function(){const o=window.getComputedStyle;window.getComputedStyle=function(e,t){return e&&(e.hasAttribute("data-adblock-bait")||e.hasAttribute("data-adblock-root")||"1"===e.getAttribute("data-br"))?{display:"block",visibility:"visible",opacity:"1"}: o.apply(this,arguments)};const f=window.fetch;window.fetch=function(e,t){const u="string"==typeof e?e:e instanceof URL?e.href:e&&e.url?e.url:"";if(u.includes("/api/me/block-check"))return Promise.resolve(new Response(JSON.stringify({ok:!0,blocked:!1}),{headers:{"content-type":"application/json"}}));if(u.includes("/api/dev-block"))return Promise.resolve(new Response(JSON.stringify({ok:!0}),{headers:{"content-type":"application/json"}}));return f.apply(this,arguments)}})();
 ||maxmovie.com/_next/static/chunks/framework.aa400efa16f23e2b0cfe.js
 $@$link[rel="manifest"]
 m.fmkorea.com#@$?#*.bd.bd_mobile:not(:has(#bd_capture ~ #comment)):has(form[action="./"]:matches-css(height: auto)) { remove: true; }
