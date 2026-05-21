@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.05.21
-! TimeUpdated: 2026-05-21T15:33:03+00:00
+! TimeUpdated: 2026-05-21T19:56:10+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -25,7 +25,7 @@
 [$domain=/torrent[a-z0-9]*\.[a-z]{2,}/]##[href*='/ad'][target='_blank']:has(img)
 [$domain=/torrent[a-z0-9]*\.[a-z]{2,}/]##div[class$='gallery'][id] [target='_blank']:upward(1)
 [$domain=/torrentqq[0-9]*\.com/]##div.at-banner:has(a[href*="/ads/"])
-[$domain=/yadongtv[0-9]*\.[a-z]{2,}/]##div[style*="top: 215px"]:has(img[src*="/banners/"]), img[src*="/banners/"]
+[$domain=/yadongtv[0-9]*\.com/]##div[style*="top: 215px"]:has(img[src*="/banners/"]), img[src*="/banners/"]
 a-ha.io##div[aria-label="advertisement"]
 algumon.com##div:has([data-tip^='파트너스'], div[style*='height'], ins):is(.card, .deal-2col)
 arca.live##.vrow.hybrid:has(.category-badge)
@@ -155,6 +155,7 @@ darkgirl8.com,darkgirl9.com%#%#//scriptlet('trusted-click-element', '#adbtn')
 jusocon1.com,jusocon2.com##.banner_box
 mingky13.net,ydparty06.net##div:is(.top-wrap, .mid-wrap, .bot-wrap):has(a.grid-asset[data-item-id])
 sbxh1.com,sbxh2.com,sbxh3.com##[aria-label*='배너']
+sbxh1.com,sbxh2.com,sbxh3.com##[data-pm-ov="1"]
 xxzone22.top##[id*="main-banner"], .gplayer-ad-overlay, #popupBannerModal
 !#if (adguard && adguard_app_ios && adguard_ext_safari && adguard_ext_chromium && adguard_ext_edge && adguard_ext_firefox)
 ###img_row_container
