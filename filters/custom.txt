@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.05.24
-! TimeUpdated: 2026-05-24T19:20:04+00:00
+! Version: 2026.05.25
+! TimeUpdated: 2026-05-25T10:12:19+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -213,8 +213,6 @@ m.fmkorea.com##section.fmWidgetStyle2019.bd_mobile.bd:matches-css(margin: /[0-5]
 namu.wiki##div:has(img[data-doc]:not([data-doc^="/jump/"]):not([data-doc^="/w/"])):not(:has([id])), div:has(> div[id]:empty:only-child)
 ||maxmovie.com/_next/static/chunks/framework.aa400efa16f23e2b0cfe.js
 sbxh1.com,sbxh2.com,sbxh3.com#@%#//scriptlet('set-local-storage-item', '/ntk_blk_/', '$remove$')
-sbxh1.com,sbxh2.com,sbxh3.com#@%#//scriptlet('spoof-css', '[data-bs], img[width], img[height], [data-bp]', 'height', '100')
-sbxh1.com,sbxh2.com,sbxh3.com#@%#//scriptlet('spoof-css', '[data-bs], img[width], img[height], [data-bp]', 'width', '100')
 sbxh1.com,sbxh2.com,sbxh3.com#%#(()=>{let f=()=>{document.querySelectorAll('[data-br="1"] button,[data-bs="1"] button').forEach(e=>{if(!e.querySelector('.x-cv')){e.style.position="relative";let o=document.createElement("div");o.className="x-cv";o.style.cssText="position:absolute;inset:0;background:rgba(20,24,33,0.04);z-index:10;pointer-events:auto;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:bold;color:rgba(20,24,33,0.08);letter-spacing:1px;";o.textContent="AdGuard";e.appendChild(o)}})};new MutationObserver(f).observe(document.documentElement,{childList:!0,subtree:!0});f()})();
 $@$link[rel="manifest"]
 m.fmkorea.com#@$?#*.bd.bd_mobile:not(:has(#bd_capture ~ #comment)):has(form[action="./"]:matches-css(height: auto)) { remove: true; }
