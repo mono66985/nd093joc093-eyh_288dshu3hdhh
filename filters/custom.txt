@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.05.28
-! TimeUpdated: 2026-05-28T16:03:37+00:00
+! TimeUpdated: 2026-05-28T20:26:18+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -65,6 +65,7 @@ fmkorea.com##[class$='_ad']
 fnnews.com##[id="hotPhotoArea"], [data-widget_id]
 fnnews.com##div[style*="height:"]:has(iframe, script, ins), div[style*="text-align: center"]:has(> iframe)
 gall.dcinside.com##.gnb_list.clear > li:has(> [onclick])
+gaykorea.net,yoboyobo.kr##.cu_gallery-item, .main-slider, .product_viewpage-latest, div[class^="m-b-"]:has(> div > p.powered)
 get*ads-*-du.a.run.app^
 ggoorr.net##div[style^="min-height"]:has(> ins.adsbygoogle)
 ggoorr.net##li.code-list-middle > div:has(ins.adsbygoogle)
