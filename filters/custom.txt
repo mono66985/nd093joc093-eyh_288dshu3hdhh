@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.05.29
-! TimeUpdated: 2026-05-29T20:28:22+00:00
+! Version: 2026.05.30
+! TimeUpdated: 2026-05-30T03:37:24+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -113,6 +113,7 @@ namu.wiki#$#div[class][id]:is(:empty, :has(> iframe[id^='google_ads_iframe'])) {
 naver.com###sb-kh-shortents-wrap
 naver.com##.sa_mw.sa_empty_ad
 news.jtbc.co.kr##.print-hide:has-text(AD)
+nimi.wiki##+js(aeld, click, popMagic)
 orbi.kr##div[x-data="advertisement"]
 orbi.kr##li.listAd
 pay.naver.com##div[class^='BottomAds_article']
