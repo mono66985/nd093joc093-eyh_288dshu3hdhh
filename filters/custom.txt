@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.05.30
-! TimeUpdated: 2026-05-30T03:37:24+00:00
+! TimeUpdated: 2026-05-30T19:19:37+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -56,6 +56,7 @@ ddaltube.com##+js(remove-attr, data-a, #dtube-player)
 ddaltube.com##.dtube-banner-grid, .vjs-video-ad-click-overlay, .player-banner-overlay.absolute > a.block
 diningcode.com##.ad-container
 diningcode.com##li:has(.PoiAdsSpacerList)
+doctornow.co.kr##div.flex.w-full:has(> div.relative, > ins.adsbygoogle)
 dschool.co.kr###modal-banner
 dschool.co.kr##[id="lean_overlay"]
 dvdprime.com##[id$='top_banner']
@@ -144,8 +145,6 @@ teamblind.com##[href^='https://link.coupang.com/re/AFFSDP']
 teamblind.com##div.article-list-pre:has([href^='https://link.coupang.com/re/AFFSDP'])
 teamblind.com##div.article:has(> [href^='https://link.coupang.com/re/AFFSDP'])
 teamblind.com##div.comment_area.wrap-comment[style='cursor: pointer;']
-torrentpi150.com,torrentpi160.com##.h20 +.widget-box
-torrentpi150.com,torrentpi160.com##div.col-sm-12 > .widget-box > .basic-post-gallery
 tvroom.*##.banner_l
 uppity.co.kr##.adrop-outer
 veritas-a.com##article.grid.body > div.clearfix:has(.ad-template)
@@ -169,12 +168,12 @@ bampt3.com,bampt4.com##.small-banners-grid, .small-ad-item, .premium-banner-wrap
 darkgirl8.com###adskip, #posterWrap, #main-banner
 darkgirl8.com##.banner, a[href*="clickadu.net"]
 darkgirl8.com%#%#//scriptlet('trusted-click-element', '#adbtn')
-fxfx324.com,fxfx325.com,wftoon211.com,wftoon212.com##div.top-banner
+fxfx325.com,fxfx326.com,wftoon213.com,wftoon214.com##div.top-banner
 jusocon1.com,jusocon2.com##.banner_box
 mingky13.net,ydparty08.net##div:is(.top-wrap, .mid-wrap, .bot-wrap):has(a.grid-asset[data-item-id])
 sbxh1.com,sbxh2.com,sbxh3.com##[data-pm-ov="1"]
 tkor121.com##[class*="bancol"], div.main_top_bann
-wtwt327.com##div.banner
+wtwt328.com,wtwt329.com##div.banner
 xxzone22.top##[id*="main-banner"], .gplayer-ad-overlay, #popupBannerModal
 !#if (adguard && adguard_app_ios && adguard_ext_safari && adguard_ext_chromium && adguard_ext_edge && adguard_ext_firefox)
 ###img_row_container
