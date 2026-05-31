@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.05.30
-! TimeUpdated: 2026-05-30T19:19:37+00:00
+! Version: 2026.05.31
+! TimeUpdated: 2026-05-31T04:03:48+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -15,6 +15,7 @@
 ##[class^='basic-banner'][id]
 ##[class^='happy-header']
 ##[id^='hd_pop']
+##[target='_blank']:has([src*='/banner/'])
 *##[target='_blank']:has([src*='/banner/'])
 *$script,third-party,domain=nimi.wiki|kissjav.*
 *tcid=$all
@@ -114,6 +115,7 @@ namu.wiki#$#div[class][id]:is(:empty, :has(> iframe[id^='google_ads_iframe'])) {
 naver.com###sb-kh-shortents-wrap
 naver.com##.sa_mw.sa_empty_ad
 news.jtbc.co.kr##.print-hide:has-text(AD)
+nimi.wiki##+js(aeld, click, doEvent)
 nimi.wiki##+js(aeld, click, popMagic)
 orbi.kr##div[x-data="advertisement"]
 orbi.kr##li.listAd
@@ -150,6 +152,7 @@ uppity.co.kr##.adrop-outer
 veritas-a.com##article.grid.body > div.clearfix:has(.ad-template)
 windowsforum.kr,seoul.co.kr,xportsnews.com##.ad
 wowtv.co.kr,cafe.naver.com##[class*='Banner']
+xtoon365.com##[class$='-ad']
 yozm.wishket.com##[data-testid^="advertisement-"], [data-testid="top-banner"]
 yugiyu.com##.popup
 zod.kr##div[id]:has(> [target] > img)
@@ -158,7 +161,6 @@ zod.kr##div[id]:has(> [target] > img)
 ||dvdprime.com/file/*/banner
 ||kamp.kakao.com^$app=com.kakao.talk
 ||link.coupang.com/re/AFFHOME?lptag=*&amp;subid=pointlink$all,reason=수익링크
-||serv.ds.kakao.com^
 ||shortformstats.kakao.com^$app=com.kakao.talk
 ||t*kor*.com/images/
 ||thumb.kakaocdn.net^$app=com.kakao.talk
@@ -167,14 +169,14 @@ bamgad7.com,bamgad8.com##ul.row:has(img[src*="/file/advertise/"])
 bampt3.com,bampt4.com##.small-banners-grid, .small-ad-item, .premium-banner-wrapper
 darkgirl8.com###adskip, #posterWrap, #main-banner
 darkgirl8.com##.banner, a[href*="clickadu.net"]
-darkgirl8.com%#%#//scriptlet('trusted-click-element', '#adbtn')
+darkgirl8.com#%#//scriptlet('trusted-click-element', '#adbtn')
 fxfx325.com,fxfx326.com,wftoon213.com,wftoon214.com##div.top-banner
 jusocon1.com,jusocon2.com##.banner_box
 mingky13.net,ydparty08.net##div:is(.top-wrap, .mid-wrap, .bot-wrap):has(a.grid-asset[data-item-id])
 sbxh1.com,sbxh2.com,sbxh3.com##[data-pm-ov="1"]
-tkor121.com##[class*="bancol"], div.main_top_bann
+tkor121.com##.main_top_bann
 wtwt328.com,wtwt329.com##div.banner
-xxzone22.top##[id*="main-banner"], .gplayer-ad-overlay, #popupBannerModal
+xxzone23.top,xxzone24.top##[id*="main-banner"], .gplayer-ad-overlay, #popupBannerModal
 !#if (adguard && adguard_app_ios && adguard_ext_safari && adguard_ext_chromium && adguard_ext_edge && adguard_ext_firefox)
 ###img_row_container
 ###viewCover
@@ -206,14 +208,14 @@ namu.wiki##li:has(a > time):not(:has([href*='/raw/'])):upward(2)
 naver.com##div.sds-comps-vertical-layout.fds-shortents-compact-block[data-template-id="layout"]
 phdkim.net##.app-smart-banner
 quasarzone.com##.best-official-news, .new-official-news, .best-official-news-container, .new-official-news-container, .new-partner-saleinfo-container
-sbxh1.com,sbxh2.com,sbxh3.com##.vw-swipe-hint
+sbxh3.com,sbxh4.com,sbxh5.com##.vw-swipe-hint
 search.dcinside.com##.right_content
 search.naver.com##.api_subject_bx div:has(.fds-aib-answer-expand-button-wrapper:not([style*="none"])) + div
 search.naver.com##.api_subject_bx div:has(.fds-aib-answer-expand-button-wrapper:not([style*="none"])) + div + div
 cafe.naver.com##+js(remove-class, disable-select, #ct)
 fmkorea.com##+js(set, link_url, '')
-||arca.live/static/assets/js/adult.min.js
 ruliweb.com##+js(remove-class, ai_blind, #board_read)
+||arca.live/static/assets/js/adult.min.js
 aagag.com##+js(set-cookie, ab, 0)
 aagag.com#$#.la { position: absolute !important; left: -3000px !important; width: 60px !important; height: 20px !important; }
 damoang.net##[aria-label="광고 차단 안내"]
@@ -223,11 +225,12 @@ m.fmkorea.com##script ~ div.bd_mobile.bd:matches-css(margin: /[0-5]px [0-5]px/):
 m.fmkorea.com##section.fmWidgetStyle2019.bd_mobile.bd:matches-css(margin: /[0-5]px [0-5]px/):matches-css(padding: /[0-5]px/):remove()
 namu.wiki##div:has(img[data-doc]:not([data-doc^="/jump/"]):not([data-doc^="/w/"])):not(:has([id])), div:has(> div[id]:empty:only-child)
 ||maxmovie.com/_next/static/chunks/framework.aa400efa16f23e2b0cfe.js
-sbxh1.com,sbxh2.com,sbxh3.com#@%#//scriptlet('set-local-storage-item', '/ntk_blk_/', '$remove$')
 $@$link[rel="manifest"]
 m.fmkorea.com#@$?#*.bd.bd_mobile:not(:has(#bd_capture ~ #comment)):has(form[action="./"]:matches-css(height: auto)) { remove: true; }
 mlbpark.donga.com#@$#div[id^="SmartPhone_"][id$="_today"] .lists > li::before { padding-top: 0px !important; border-bottom: none !important; }
 sooplive.com#@%#//scriptlet('json-prune-xhr-response', 'data.adballoon', '', 'station/video/a/view')
+!#if (adguard && adguard_app_windows)
+!#endif
 ||ublockdns.com^$doc
 ||ublockorigin.com^$doc
 www.google.com##.MjjYud:not(:has([data-id="mosaic"])):has(a[href*="acxkjp.art"], a[href*="baepwu.art"], a[href*="drycix.art"], a[href*="dsmabm.art"], a[href*="ghugnf.art"], a[href*="hrxoda.art"], a[href*="izgxpd.art"], a[href*="jgkoqg.art"], a[href*="jzmhse.art"], a[href*="loeezc.art"], a[href*="mpvrxu.art"], a[href*="oxbvqj.art"], a[href*="pmtpxf.art"], a[href*="qvkjum.art"], a[href*="xximst.art"], a[href*="yricum.art"], a[href*="zrsmjs.art"], a[href*="akxhlo.asia"], a[href*="bskzfj.asia"], a[href*="btbmyf.asia"], a[href*="cbodnd.asia"], a[href*="changnyeoneek.asia"], a[href*="dygnyh.asia"], a[href*="gbarzf.asia"], a[href*="hnangpo.asia"], a[href*="koreanchangxx.asia"], a[href*="koreangirl.asia"], a[href*="nglryc.asia"], a[href*="obexke.asia"], a[href*="omjedi.asia"], a[href*="oonxly.asia"], a[href*="scyhqb.asia"], a[href*="sexybanat.asia"], a[href*="tapvnx.asia"], a[href*="therefectory.asia"], a[href*="ttdshj.asia"], a[href*="vjsifg.asia"], a[href*="wnluvc.asia"], a[href*="yanggal.asia"], a[href*="tveygl.baby"], a[href*="umpodg.baby"], a[href*="berberecafe.be"], a[href*="bitaineboulangerie.be"], a[href*="blogtopia.be"], a[href*="chirobart.be"], a[href*="clublescerises.be"], a[href*="cycure.be"], a[href*="ha-vesalius.be"], a[href*="hetvertier.be"], a[href*="ista-webportal.be"], a[href*="lacasablanca.be"], a[href*="milkflow.be"], a[href*="obekin.be"], a[href*="olne.be"], a[href*="raamwebshop.be"], a[href*="servessolutions.be"], a[href*="thima.be"], a[href*="inthegroove.blog"], a[href*="topuniversities.blog"], a[href*="trending360.blog"], a[href*="ggltransport.ca"], a[href*="obsidianinc.ca"], a[href*="furmxd.cafe"], a[href*="azneen.cc"], a[href*="gysrjs.cc"], a[href*="ofkvuv.cc"], a[href*="agpbgv.cloud"], a[href*="fdzfbg.cloud"], a[href*="kkwwev.cloud"], a[href*="lmgwzm.cloud"], a[href*="lmxubn.cloud"], a[href*="lnezil.cloud"], a[href*="yslcir.cloud"], a[href*="watchfreejavonline.co"], a[href*="hkpqax.codes"], a[href*="jgulvs.codes"], a[href*="spbmkd.codes"], a[href*="tjdhmq.codes"], a[href*="yigcbx.codes"], a[href*="garagepierreperreault.com"], a[href*="ginegar.com"], a[href*="hafeed.com"], a[href*="hudsontrainingcenter.com"], a[href*="infotipguide.com"], a[href*="karunalayamattingal.com"], a[href*="marchesandagadrummond.com"], a[href*="nrfsi.com"], a[href*="passionitgroup.com"], a[href*="zigcou.com"], a[href*="czvefo.company"], a[href*="eldokl.company"], a[href*="gslarr.company"], a[href*="igkmih.company"], a[href*="ktbflh.company"], a[href*="mfczbq.company"], a[href*="qntpgd.company"], a[href*="uahxxl.company"], a[href*="umovhc.company"], a[href*="vuzhnj.company"], a[href*="yonevf.company"], a[href*="energylab.cz"], a[href*="antoniopenalver.eu"])
