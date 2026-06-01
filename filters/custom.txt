@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.06.01
-! TimeUpdated: 2026-06-01T04:18:16+00:00
+! TimeUpdated: 2026-06-01T11:39:04+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -106,6 +106,7 @@ m.dcinside.com##.view-btm-con
 m.dcinside.com##li:not(.notice):has(> .detail-top-lnk)
 m.ppomppu.co.kr##.js-ad_slot.JS-div_gpt_ad
 m.ppomppu.co.kr##div[style^='text-align:center;']
+m.ruliweb.com##.board_bottom > .ruli_delayed_ad_slot
 m.ruliweb.com##tr:has(.nbp_container)
 m.wowtv.co.kr##.container > div[style]
 m.wowtv.co.kr,inven.co.kr##[id*='Banner']
@@ -175,10 +176,10 @@ bampt3.com,bampt4.com##.small-banners-grid, .small-ad-item, .premium-banner-wrap
 darkgirl8.com###adskip, #posterWrap, #main-banner
 darkgirl8.com##.banner, a[href*="clickadu.net"]
 darkgirl8.com#%#//scriptlet('trusted-click-element', '#adbtn')
-fxfx325.com,fxfx326.com,wftoon213.com,wftoon214.com##div.top-banner
+fxfx325.com,fxfx326.com,fxfx327.com,wftoon213.com,wftoon214.com,wftoon215.com##div.top-banner
 jusocon1.com,jusocon2.com##.banner_box
-mingky13.net,ydparty08.net##div:is(.top-wrap, .mid-wrap, .bot-wrap):has(a.grid-asset[data-item-id])
-sbxh1.com,sbxh2.com,sbxh3.com##[data-pm-ov="1"]
+mingky.live,ydparty.tv##div:is(.top-wrap, .mid-wrap, .bot-wrap):has(a.grid-asset[data-item-id])
+sbxh3.com,sbxh4.com,sbxh5.com##[data-pm-ov="1"]
 tkor121.com##.main_top_bann
 wtwt328.com,wtwt329.com##div.banner
 xxzone23.top,xxzone24.top##[id*="main-banner"], .gplayer-ad-overlay, #popupBannerModal
@@ -187,7 +188,6 @@ xxzone23.top,xxzone24.top##[id*="main-banner"], .gplayer-ad-overlay, #popupBanne
 ###viewCover
 ##.banner_wrap2
 !#endif
-arca.live##.d-lg-none.topbar-area
 arca.live##a:has(img[src*="karisuma-point-x2.png"])
 gall.dcinside.com##.dc_all
 gall.dcinside.com##.dcmedia.content_box
