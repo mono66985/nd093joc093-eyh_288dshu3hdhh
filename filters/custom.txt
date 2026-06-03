@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.06.03
-! TimeUpdated: 2026-06-03T11:03:37+00:00
+! TimeUpdated: 2026-06-03T16:53:34+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -113,6 +113,9 @@ m.wowtv.co.kr##.container > div[style]
 m.wowtv.co.kr,inven.co.kr##[id*='Banner']
 map.naver.com##.marker_icon_area.main:has(img[src*="/ad-marker/"])
 map.naver.com##div[class*="StyledAdGuideTooltip"]
+mimint.co.kr###anchor-layer:has(.anchor-slot)
+mimint.co.kr##.banner-split-reveal
+mimint.co.kr##.index-right-banner:has(.main-right-ad)
 maplescouter.com,loawa.com###popup
 mlbpark.donga.com##[class^='coupang'], [class*='naver_place']
 mlbpark.donga.com##ul.sub_lists_today.lists > li.items:nth-of-type(6)::before
