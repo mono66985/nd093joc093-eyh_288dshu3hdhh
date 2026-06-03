@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.06.02
-! TimeUpdated: 2026-06-02T16:36:40+00:00
+! Version: 2026.06.03
+! TimeUpdated: 2026-06-03T11:03:37+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -178,7 +178,7 @@ bampt3.com,bampt4.com##.small-banners-grid, .small-ad-item, .premium-banner-wrap
 darkgirl8.com###adskip, #posterWrap, #main-banner
 darkgirl8.com##.banner, a[href*="clickadu.net"]
 darkgirl8.com#%#//scriptlet('trusted-click-element', '#adbtn')
-fxfx325.com,fxfx326.com,fxfx327.com,wftoon213.com,wftoon214.com,wftoon215.com##div.top-banner
+fxfx325.com,fxfx326.com,fxfx327.com,wftoon213.com,wftoon214.com,wftoon215.com,wfwf458.com,wfwf459.com,wfwf460.com##div.top-banner
 jusocon1.com,jusocon2.com##.banner_box
 mingky.live,ydparty.tv##div:is(.top-wrap, .mid-wrap, .bot-wrap):has(a.grid-asset[data-item-id])
 sbxh3.com,sbxh4.com,sbxh5.com##[data-pm-ov="1"]
