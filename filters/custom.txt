@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.06.05
-! TimeUpdated: 2026-06-05T14:55:34+00:00
+! TimeUpdated: 2026-06-05T19:57:45+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -130,6 +130,8 @@ nimi.wiki##+js(aeld, click, doEvent)
 nimi.wiki##+js(aeld, click, popMagic)
 orbi.kr##div[x-data="advertisement"]
 orbi.kr##li.listAd
+paxnet.co.kr##.stock-ad, [class^="dv-com-m0"]
+paxnet.co.kr##iframe[src*="/banner/"]
 pay.naver.com##div[class^='BottomAds_article']
 postshare.co.kr###adWallContainer
 postshare.co.kr###blurredContentArea:style(filter: none !important; -webkit-filter: none !important; opacity: 1 !important; pointer-events: auto !important; user-select: auto !important;)
