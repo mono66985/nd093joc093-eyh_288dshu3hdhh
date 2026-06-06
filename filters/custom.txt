@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.06.06
-! TimeUpdated: 2026-06-06T08:35:37+00:00
+! TimeUpdated: 2026-06-06T19:26:21+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -147,6 +147,7 @@ ppomppu.co.kr$$tr:has-text(AD)
 ppomppu.co.kr,m.ppomppu1.co.kr##[id$='_popup']
 qquing.net,ibric.org##[class*="ad-wrap"]
 red52.kr##.notice-box-area, .banner-pc, .banner-m
+redbogo2.com,redbogo3.com##.ad-banner-section
 rgr.kr,rgrong.net,te31.com###foot:style(height: 150px !important;)
 rgr.kr,rgrong.net,te31.com##div[style='position:relative;z-index:11;']
 ruliweb.com,ppomppu.co.kr,naver.com,daum.net,etoland.co.kr##[id$='_ad']
