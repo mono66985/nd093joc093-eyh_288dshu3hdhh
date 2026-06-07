@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.06.07
-! TimeUpdated: 2026-06-07T04:09:22+00:00
+! TimeUpdated: 2026-06-07T13:57:28+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -118,6 +118,8 @@ m.ppomppu.co.kr##ul:has(> .mobile-ad-sponsor)
 m.ruliweb.com##tr:has(.nbp_container)
 m.wowtv.co.kr##.container > div[style]
 m.wowtv.co.kr,inven.co.kr##[id*='Banner']
+map.naver.com##.marker_icon_area.main:has(img[src*="/ad-marker/"])
+map.naver.com##div[class*="StyledAdGuideTooltip"]
 maplescouter.com,loawa.com###popup
 mimint.co.kr###anchor-layer:has(.anchor-slot)
 mimint.co.kr##.ads-container, .banner-split-reveal, .g-center-wrap, .index-right-banner
@@ -194,7 +196,6 @@ jusocon1.com,jusocon2.com##.banner_box
 mingky.live,ydparty.tv##div:is(.top-wrap, .mid-wrap, .bot-wrap):has(a.grid-asset[data-item-id])
 redbogo2.com,redbogo3.com##.ad-banner-section
 sbxh3.com,sbxh4.com,sbxh5.com##[data-pm-ov="1"]
-tkor124.com,tkor125.com,tkor127.com##.main_top_bann
 xxzone23.top,xxzone24.top##[id*="main-banner"], .gplayer-ad-overlay, #popupBannerModal
 !#if (adguard && adguard_app_ios && adguard_ext_safari && adguard_ext_chromium && adguard_ext_edge && adguard_ext_firefox)
 ###img_row_container
