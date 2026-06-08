@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.06.07
-! TimeUpdated: 2026-06-07T19:25:46+00:00
+! Version: 2026.06.08
+! TimeUpdated: 2026-06-08T04:13:37+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -126,8 +126,6 @@ mimint.co.kr##.ads-container, .banner-split-reveal, .g-center-wrap, .index-right
 mimint.co.kr##.list_row:has(div[data-ad-mode])
 mlbpark.donga.com##[class^='coupang'], [class*='naver_place']
 mlbpark.donga.com##ul.sub_lists_today.lists > li.items:nth-of-type(6)::before
-muko.kr##.muko-ad-impression
-muko.kr###popupAdOverlay
 mule.co.kr##[class*='-ad-']
 namu.news##li:has(div[style*="min-height:100px"]):has(> div > div[id*="article-a"])
 namu.wiki#$#div[class][id]:is(:empty, :has(> iframe[id^='google_ads_iframe'])) { display: none !important; }
@@ -223,8 +221,6 @@ m.dcinside.com##section.grid > .md-tit-box:has-text(Daum)
 m.naver.com##.chf_feed_wrap > .type_square.cc_clip_list
 m.naver.com##script#MM_search_disaster ~*
 mlbpark.donga.com##.the_hottest
-muko.kr##.lp-install-chip
-muko.kr##.muko-aa-join
 namu.wiki##div[class]:matches-css(position: sticky)
 namu.wiki##li:has(a > time):not(:has([href*='/raw/'])):upward(2)
 naver.com##div.sds-comps-vertical-layout.fds-shortents-compact-block[data-template-id="layout"]
