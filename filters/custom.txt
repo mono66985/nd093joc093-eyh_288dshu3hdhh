@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.06.08
-! TimeUpdated: 2026-06-08T04:13:37+00:00
+! Version: 2026.06.10
+! TimeUpdated: 2026-06-10T20:32:52+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -152,6 +152,8 @@ red52.kr##.notice-box-area, .banner-pc, .banner-m
 rgr.kr,rgrong.net,te31.com###foot:style(height: 150px !important;)
 rgr.kr,rgrong.net,te31.com##div[style='position:relative;z-index:11;']
 ruliweb.com,ppomppu.co.kr,naver.com,daum.net,etoland.co.kr##[id$='_ad']
+samgakgame.com###homeAdSlot, #bannerAd, #resultBannerAd, #frontAdMedia
+samgakgame.com##+js(nano-sib, adRemaining)
 search.danawa.com##[id^='powerShoppingArea']
 search.danawa.com##li[data-itemtype='adsmart']
 section.blog.naver.com##.area_advertisement
