@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.06.12
-! TimeUpdated: 2026-06-12T04:12:09+00:00
+! TimeUpdated: 2026-06-12T15:19:25+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -77,6 +77,7 @@ fmkorea.com##[class$='_ad']
 fnnews.com##[id="hotPhotoArea"], [data-widget_id]
 fnnews.com##div[style*="height:"]:has(iframe, script, ins), div[style*="text-align: center"]:has(> iframe)
 gall.dcinside.com##.gnb_list.clear > li:has(> [onclick])
+gangmom.kr##.banner-wrapper
 gaykorea.net,yoboyobo.kr##.cu_gallery-item, .main-slider, .product_viewpage-latest, div[class^="m-b-"]:has(> div > p.powered)
 get*ads-*-du.a.run.app^
 ggoorr.net##div[style^="min-height"]:has(> ins.adsbygoogle)
@@ -177,7 +178,6 @@ windowsforum.kr,seoul.co.kr,xportsnews.com##.ad
 wowtv.co.kr,cafe.naver.com##[class*='Banner']
 xtoon365.com##[class$='-ad']
 yozm.wishket.com##[data-testid^="advertisement-"], [data-testid="top-banner"]
-yugiyu.com##.popup
 zod.kr##div[id]:has(> [target] > img)
 ||*nestads.*
 ||ader.naver.com/*?c=m_$all
@@ -198,6 +198,7 @@ mingky.live,ydparty.tv##div:is(.top-wrap, .mid-wrap, .bot-wrap):has(a.grid-asset
 redbogo2.com,redbogo3.com##.ad-banner-section
 sbxh3.com,sbxh4.com,sbxh5.com##[data-pm-ov="1"]
 xxzone23.top,xxzone24.top##[id*="main-banner"], .gplayer-ad-overlay, #popupBannerModal
+yugiyu2.com,yugiyu3.com##ul:has(> li.banner-item)
 !#if (adguard && adguard_app_ios && adguard_ext_safari && adguard_ext_chromium && adguard_ext_edge && adguard_ext_firefox)
 ###img_row_container
 ###viewCover
