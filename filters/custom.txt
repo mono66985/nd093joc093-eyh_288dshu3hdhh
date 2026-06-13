@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.06.13
-! TimeUpdated: 2026-06-13T14:03:55+00:00
+! TimeUpdated: 2026-06-13T19:39:25+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -78,7 +78,7 @@ fnnews.com##[id="hotPhotoArea"], [data-widget_id]
 fnnews.com##div[style*="height:"]:has(iframe, script, ins), div[style*="text-align: center"]:has(> iframe)
 gall.dcinside.com##.gnb_list.clear > li:has(> [onclick])
 gangmom.kr##.banner-wrapper
-gaykorea.net,yoboyobo.kr##.cu_gallery-item, .main-slider, .product_viewpage-latest, div[class^="m-b-"]:has(> div > p.powered)
+gaykorea.net,yoboyobo.kr##.cu_gallery-item, .main-slider, .md_ad, .product_viewpage-latest, div[class^="m-b-"]:has(> div > p.powered)
 get*ads-*-du.a.run.app^
 ggoorr.net##div[style^="min-height"]:has(> ins.adsbygoogle)
 ggoorr.net##li.code-list-middle > div:has(ins.adsbygoogle)
@@ -127,6 +127,8 @@ mimint.co.kr##.ads-container, .banner-split-reveal, .g-center-wrap, .index-right
 mimint.co.kr##.list_row:has(div[data-ad-mode])
 mlbpark.donga.com##[class^='coupang'], [class*='naver_place']
 mlbpark.donga.com##ul.sub_lists_today.lists > li.items:nth-of-type(6)::before
+mmzone.co.kr###header_top:has(.ads-wrap)
+mmzone.co.kr##.m-center-adt-container
 mule.co.kr##[class*='-ad-']
 namu.news##li:has(div[style*="min-height:100px"]):has(> div > div[id*="article-a"])
 namu.wiki#$#div[class][id]:is(:empty, :has(> iframe[id^='google_ads_iframe'])) { display: none !important; }
@@ -177,7 +179,8 @@ veritas-a.com##article.grid.body > div.clearfix:has(.ad-template)
 windowsforum.kr,seoul.co.kr,xportsnews.com##.ad
 wowtv.co.kr,cafe.naver.com##[class*='Banner']
 xtoon365.com##[class$='-ad']
-yozm.wishket.com##[data-testid^="advertisement-"], [data-testid="top-banner"]
+yozm.wishket.com##[data-testid^="advertisement-"]
+yozm.wishket.com##[data-testid="top-banner"]
 zod.kr##div[id]:has(> [target] > img)
 ||*nestads.*
 ||ader.naver.com/*?c=m_$all
