@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.06.15
-! TimeUpdated: 2026-06-15T20:56:57+00:00
+! Version: 2026.06.16
+! TimeUpdated: 2026-06-16T04:24:56+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -28,7 +28,7 @@ ddaltube.com,yastar.xyz##.dtube-banner-grid, .vjs-video-ad-click-overlay, .playe
 gaykorea.net,yoboyobo.kr##.cu_gallery-item, .main-slider, .md_ad, .product_viewpage-latest, div[class^="m-b-"]:has(> div > p.powered)
 inven.co.kr,mt.co.kr##[class$='ads']
 inven.co.kr,wowtv.co.kr,damoang.net,hungryapp.co.kr##[class*='-banner']
-linkareer.com,m.ppomppu.co.kr,ggoorr.net##div:has(> ins.adsbygoogle)
+linkareer.com,m.ppomppu.co.kr,ggoorr.net,coinpan.com##div:has(> ins.adsbygoogle)
 m.wowtv.co.kr,inven.co.kr##[id*='Banner']
 maplescouter.com,loawa.com###popup
 rgr.kr,rgrong.net,te31.com###foot:style(height: 150px !important;)
@@ -147,8 +147,6 @@ orbi.kr##li.listAd
 paxnet.co.kr##.stock-ad, [class^="dv-com-m0"]
 paxnet.co.kr##iframe[src*="/banner/"]
 pay.naver.com##div[class^='BottomAds_article']
-postshare.co.kr###adWallContainer
-postshare.co.kr###blurredContentArea:style(filter: none !important; -webkit-filter: none !important; opacity: 1 !important; pointer-events: auto !important; user-select: auto !important;)
 postshare.co.kr##div:has(> a > img[src*="/images/banner/"])
 postype.com##div[data-sentry-component="RecommendFeedGoogleAd"]:upward(1)
 ppomppu.co.kr##.bottom > div[style]
@@ -195,10 +193,10 @@ bampt3.com,bampt4.com,bampt5.com##.small-banners-grid, .small-ad-item, .premium-
 darkgirl11.com,darkgirl12.com,darkgirl13.com###adskip, #posterWrap, #main-banner
 darkgirl11.com,darkgirl12.com,darkgirl13.com##.banner, a[href*="clickadu.net"]
 darkgirl11.com,darkgirl12.com,darkgirl13.com#%#//scriptlet('trusted-click-element', '#adbtn')
-ggbam14.com##+js(nano-stb, adGate)
+ggbam14.com,ggbam15.com,ggbam16.com##+js(nano-stb, adGate)
 mingky04.live,ydparty02.tv##.grid-asset
-redgg50.cc##+js(nano-sib, countdown)
-sbxh6.com,sbxh7.com,sbxh8.com##[data-pm-ov="1"]
+redgg50.cc,redgg51.cc,redgg52.cc##+js(nano-sib, countdown)
+sbxh7.com,sbxh8.com,sbxh9.com##[data-pm-ov="1"]
 xxzone24.top,xxzone25.top,xxzone26.top##[id*="main-banner"], .gplayer-ad-overlay, #popupBannerModal
 !#if (adguard && adguard_app_ios && adguard_ext_safari && adguard_ext_chromium && adguard_ext_edge && adguard_ext_firefox)
 ###img_row_container
@@ -206,8 +204,7 @@ xxzone24.top,xxzone25.top,xxzone26.top##[id*="main-banner"], .gplayer-ad-overlay
 ##.banner_wrap2
 !#endif
 !#if (adguard_app_ios || adguard_ext_safari) && !adguard_app_mac
-hitomi.la##div:has(> div[id^="__clb-spot"])
-hitomi.la##div:has(> iframe[id^="__clb-spot"])
+hitomi.la##div:has(> [id^="__clb-spot"])
 hitomi.la##+js(nowoif)
 !#endif
 arca.live##a:has(img[src*="karisuma-point-x2.png"])
@@ -238,9 +235,11 @@ quasarzone.com##.best-official-news, .new-official-news, .best-official-news-con
 search.dcinside.com##.right_content
 search.naver.com##.api_subject_bx div:has(.fds-aib-answer-expand-button-wrapper:not([style*="none"])) + div
 search.naver.com##.api_subject_bx div:has(.fds-aib-answer-expand-button-wrapper:not([style*="none"])) + div + div
-sbxh6.com,sbxh7.com,sbxh8.com##.vw-swipe-hint
+sbxh7.com,sbxh8.com,sbxh9.com##.vw-swipe-hint
 cafe.naver.com##+js(remove-class, disable-select, #ct)
 fmkorea.com##+js(set, link_url, '')
+gmarket.co.kr#$#body { -webkit-user-select: text !important; user-select: text !important; -draggable: true !important; }
+gmarket.co.kr##+js(set, mouseRightButtonDisabled, noopFunc)
 ruliweb.com##+js(remove-class, ai_blind, #board_read)
 ||arca.live/static/assets/js/adult.min.js
 aagag.com##+js(set-cookie, ab, 0)
@@ -254,6 +253,7 @@ m.fmkorea.com##script ~ div.bd_mobile.bd:matches-css(margin: /[0-5]px [0-5]px/):
 m.fmkorea.com##section.fmWidgetStyle2019.bd_mobile.bd:matches-css(margin: /[0-5]px [0-5]px/):matches-css(padding: /[0-5]px/):remove()
 money-master-365.tistory.com##+js(nostif, detectAdblock)
 namu.wiki##div:has(img[data-doc]:not([data-doc^="/jump/"]):not([data-doc^="/w/"])):not(:has([id])), div:has(> div[id]:empty:only-child)
+postshare.co.kr##+js(set-cookie, ad_unlocked_timer_final_v2, true)
 toronon.kr##+js(prevent-fetch, site_id=, emptyObj)
 ||maxmovie.com/_next/static/chunks/framework.aa400efa16f23e2b0cfe.js
 $@$link[rel="manifest"]
