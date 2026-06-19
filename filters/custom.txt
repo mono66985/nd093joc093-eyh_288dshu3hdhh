@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.06.18
-! TimeUpdated: 2026-06-18T20:27:54+00:00
+! Version: 2026.06.19
+! TimeUpdated: 2026-06-19T04:40:36+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -179,7 +179,6 @@ teamblind.com##div.article-list-pre:has([href^='https://link.coupang.com/re/AFFS
 teamblind.com##div.article:has(> [href^='https://link.coupang.com/re/AFFSDP'])
 teamblind.com##div.border-b:has(> div.flex > div[id^="infeed-home-"])
 teamblind.com##div.comment_area.wrap-comment[style='cursor: pointer;']
-tvroom.*##.banner_l
 uppity.co.kr##.adrop-outer
 veritas-a.com##article.grid.body > div.clearfix:has(.ad-template)
 xtoon365.com##[class$='-ad']
