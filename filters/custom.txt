@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.06.20
-! TimeUpdated: 2026-06-20T19:39:46+00:00
+! Version: 2026.06.21
+! TimeUpdated: 2026-06-21T09:53:02+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -63,7 +63,6 @@ avdbs.com##.ad-btn[class*='tp']
 avsee.ru##+js(acis, decodeURI, split)
 avsee.ru##.at-main > div.main-box > .miso-post-mix .post-wrap
 avsee.ru##.title div[style^='width:100%']
-avsee.ru##.widget-side-box div.main-box:first-child
 avsee.ru##[alt$='gif']
 bbs.ruliweb.com##div.clear:has([style*='overflow-x'])
 bbs.ruliweb.com##tr:has(.nick[style^='display: inline-block'])
