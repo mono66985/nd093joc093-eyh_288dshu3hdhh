@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.06.21
-! TimeUpdated: 2026-06-21T09:53:02+00:00
+! Version: 2026.06.23
+! TimeUpdated: 2026-06-23T03:45:15+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -51,7 +51,6 @@ wowtv.co.kr,cafe.naver.com##[class*='Banner']
 [$domain=/^wtwt[0-9]*\.com/]##.banner
 [$domain=/torrent[a-z0-9]*\.[a-z]{2,}/]##[href*='/ad'][target='_blank']:has(img)
 [$domain=/torrent[a-z0-9]*\.[a-z]{2,}/]##div[class$='gallery'][id] [target='_blank']:upward(1)
-[$domain=/torrentqq[0-9]*\.com/]##div.at-banner:has(a[href*="/ads/"])
 [$domain=/yadongtv[0-9]*\.com/]##div[style*="top: 215px"]:has(img[src*="/banners/"]), img[src*="/banners/"]
 3rd.supply##.h-hori-ad
 3rd.supply##.text-center:has(sp-common-adsense)
@@ -199,8 +198,8 @@ darkgirl11.com,darkgirl12.com,darkgirl13.com#%#//scriptlet('trusted-click-elemen
 ggbam14.com,ggbam15.com,ggbam16.com##+js(nano-stb, adGate)
 mingky04.live,ydparty04.tv##.grid-asset
 redgg75.top,redgg76.top,redgg85.top##+js(nano-sib, countdown)
-sbxh9.com,sbxh10.com,sbxh11.com##[data-pm-ov="1"]
-xxzone24.top,xxzone25.top,xxzone26.top##[id*="main-banner"], .gplayer-ad-overlay, #popupBannerModal
+toki25.com##[data-pm-ov="1"]
+xxzone25.top,xxzone26.top,xxzone27.top##[id*="main-banner"], .gplayer-ad-overlay, #popupBannerModal
 !#if (adguard && adguard_app_ios && adguard_ext_safari && adguard_ext_chromium && adguard_ext_edge && adguard_ext_firefox)
 ###img_row_container
 ###viewCover
@@ -235,16 +234,18 @@ namu.wiki##li:has(a > time):not(:has([href*='/raw/'])):upward(2)
 naver.com##div.sds-comps-vertical-layout.fds-shortents-compact-block[data-template-id="layout"]
 phdkim.net##.app-smart-banner
 quasarzone.com##.best-official-news, .new-official-news, .best-official-news-container, .new-official-news-container, .new-partner-saleinfo-container
-sbxh9.com,sbxh10.com,sbxh11.com##.vw-swipe-hint
 search.dcinside.com##.right_content
 search.naver.com##.api_subject_bx div:has(.fds-aib-answer-expand-button-wrapper:not([style*="none"])) + div
 search.naver.com##.api_subject_bx div:has(.fds-aib-answer-expand-button-wrapper:not([style*="none"])) + div + div
+toki25.com##.vw-swipe-hint
 cafe.naver.com##+js(remove-class, disable-select, #ct)
 fmkorea.com##+js(set, link_url, '')
 gmarket.co.kr#$#body { -webkit-user-select: text !important; user-select: text !important; -draggable: true !important; }
 gmarket.co.kr##+js(set, mouseRightButtonDisabled, noopFunc)
 ruliweb.com##+js(remove-class, ai_blind, #board_read)
 ||arca.live/static/assets/js/adult.min.js
+0db.co.kr##+js(spoof-css, #adsbox, display, block, visibility, visible, height, 100px, _recth, 100)
+0db.co.kr##+js(set, adsbygoogle, [])
 aagag.com##+js(set-cookie, ab, 0)
 aagag.com#$#.la { position: absolute !important; left: -3000px !important; width: 60px !important; height: 20px !important; }
 chatgpts.kr,free4u.tistory.com##+js(nostif, checkRealAdBlock)
