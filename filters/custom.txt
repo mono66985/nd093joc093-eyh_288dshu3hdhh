@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.06.24
-! TimeUpdated: 2026-06-24T19:49:13+00:00
+! Version: 2026.06.25
+! TimeUpdated: 2026-06-25T03:49:06+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -17,7 +17,6 @@
 ##[id^='hd_pop']
 ##[target='_blank']:has([src*='/banner/'])
 *##[target='_blank']:has([src*='/banner/'])
-*$script,third-party,domain=nimi.wiki
 *tcid=$all
 /p2p$domain=tvwiki32.net|tvwiki33.net|tvwiki34.net|bunny-frame.online
 auction.co.kr,gmarket.co.kr##.plcc_banner
@@ -43,6 +42,7 @@ ruliweb.com,ppomppu.co.kr,naver.com,daum.net,etoland.co.kr##[id$='_ad']
 tdgall.com,hygall.com##.admanager-row
 windowsforum.kr,seoul.co.kr,xportsnews.com##.ad
 wowtv.co.kr,cafe.naver.com##[class*='Banner']
+*$script,third-party,domain=nimi.wiki
 [$domain=/^fxfx[0-9]*\.com/]##.top-banner
 [$domain=/^hoohootv[0-9]*\.[a-z]{2,}/]###img_row_container
 [$domain=/^redvi[0-9]*\.com/]##div[style*="z-index: 9999"]:has(img[src*="/banners/"]), img[src*="/banners/"]
@@ -204,7 +204,7 @@ darkgirl12.com,darkgirl13.com,darkgirl14.com#%#//scriptlet('trusted-click-elemen
 ggbam14.com,ggbam15.com,ggbam16.com##+js(nano-stb, adGate)
 mingky04.live,ydparty04.tv##.grid-asset
 redgg76.top,redgg77.top,redgg78.top##+js(nano-sib, countdown)
-toki25.com##[data-pm-ov="1"]
+sbxh9.com,sbxh10.com,toki25.com,toki26.com##[data-pm-ov="1"]
 xxzone25.top,xxzone26.top,xxzone27.top##[id*="main-banner"], .gplayer-ad-overlay, #popupBannerModal
 !#if (adguard && adguard_app_ios && adguard_ext_safari && adguard_ext_chromium && adguard_ext_edge && adguard_ext_firefox)
 ###img_row_container
@@ -243,7 +243,8 @@ quasarzone.com##.best-official-news, .new-official-news, .best-official-news-con
 search.dcinside.com##.right_content
 search.naver.com##.api_subject_bx div:has(.fds-aib-answer-expand-button-wrapper:not([style*="none"])) + div
 search.naver.com##.api_subject_bx div:has(.fds-aib-answer-expand-button-wrapper:not([style*="none"])) + div + div
-toki25.com##.vw-swipe-hint
+sbxh9.com,sbxh10.com,toki25.com,toki26.com##.vw-swipe-hint
+tvwiki32.net,tvwiki33.net,tvwiki34.net##.over
 cafe.naver.com##+js(remove-class, disable-select, #ct)
 fmkorea.com##+js(set, link_url, '')
 gmarket.co.kr#$#body { -webkit-user-select: text !important; user-select: text !important; -draggable: true !important; }
