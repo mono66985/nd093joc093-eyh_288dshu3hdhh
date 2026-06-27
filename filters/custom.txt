@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.06.27
-! TimeUpdated: 2026-06-27T08:38:18+00:00
+! TimeUpdated: 2026-06-27T13:46:47+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -203,7 +203,7 @@ darkgirl12.com,darkgirl13.com,darkgirl14.com##.banner, a[href*="clickadu.net"]
 darkgirl12.com,darkgirl13.com,darkgirl14.com#%#//scriptlet('trusted-click-element', '#adbtn')
 ggbam14.com,ggbam15.com,ggbam16.com##+js(nano-stb, adGate)
 mingky04.live,ydparty04.tv##.grid-asset
-redgg76.top,redgg77.top,redgg78.top##+js(nano-sib, countdown)
+jaddal37.top,jaddal38.top,jaddal39.top##+js(nano-sib, countdown)
 sbxh9.com,sbxh10.com,toki25.com,toki26.com##[data-pm-ov="1"]
 xxzone25.top,xxzone26.top,xxzone27.top##[id*="main-banner"], .gplayer-ad-overlay, #popupBannerModal
 !#if (adguard && adguard_app_ios && adguard_ext_safari && adguard_ext_chromium && adguard_ext_edge && adguard_ext_firefox)
