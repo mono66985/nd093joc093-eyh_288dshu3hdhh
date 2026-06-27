@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.06.26
-! TimeUpdated: 2026-06-26T19:50:38+00:00
+! Version: 2026.06.27
+! TimeUpdated: 2026-06-27T03:38:19+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -18,7 +18,6 @@
 ##[target='_blank']:has([src*='/banner/'])
 *##[target='_blank']:has([src*='/banner/'])
 *tcid=$all
-/p2p$domain=tvwiki32.net|tvwiki33.net|tvwiki34.net|bunny-frame.online
 auction.co.kr,gmarket.co.kr##.plcc_banner
 blog.naver.com,comic.naver.com##[class*='banner_area']
 chimhaha.net,seoul.co.kr,mule.co.kr##[class*='Ad']
@@ -43,6 +42,7 @@ tdgall.com,hygall.com##.admanager-row
 windowsforum.kr,seoul.co.kr,xportsnews.com##.ad
 wowtv.co.kr,cafe.naver.com##[class*='Banner']
 *$script,third-party,domain=nimi.wiki
+*$websocket,domain=bunny-frame.online
 [$domain=/^fxfx[0-9]*\.com/]##.top-banner
 [$domain=/^hoohootv[0-9]*\.[a-z]{2,}/]###img_row_container
 [$domain=/^redvi[0-9]*\.com/]##div[style*="z-index: 9999"]:has(img[src*="/banners/"]), img[src*="/banners/"]
@@ -119,7 +119,6 @@ litomi.in##[data-juicy-ads-slot]
 m.anewsa.com##div[style*="width:300px"]
 m.bobaedream.co.kr##div[style$='height:50px;']
 m.danawa.com###mdnw-main-dimm, #mdnw-main-bottomSheet-container
-m.daum.net###trendKeywordsContainer
 m.dcinside.com##.layer-bottom-popup
 m.dcinside.com##.menu-scroll-lst.swiper-wrapper > li.swiper-slide:nth-of-type(n+5)
 m.dcinside.com##.survey
