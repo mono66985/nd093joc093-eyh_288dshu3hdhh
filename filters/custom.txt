@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.06.28
-! TimeUpdated: 2026-06-28T04:01:53+00:00
+! TimeUpdated: 2026-06-28T08:55:19+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -89,6 +89,7 @@ dschool.co.kr##[id="lean_overlay"]
 dvdprime.com##[id$='top_banner']
 dvdprime.com##[id^='ad_mobile']
 ebs.co.kr##.ji_adban
+ez2pattern.kr##.sticky
 fc-info.com##div[class^='Venatus_']
 fmkorea.com##[class$='_ad']
 fnnews.com##[data-widget_id]
