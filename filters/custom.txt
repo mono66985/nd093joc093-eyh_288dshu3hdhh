@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.06.28
-! TimeUpdated: 2026-06-28T19:23:30+00:00
+! Version: 2026.06.29
+! TimeUpdated: 2026-06-29T04:08:58+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -18,7 +18,7 @@
 ##[target='_blank']:has([src*='/banner/'])
 *##[target='_blank']:has([src*='/banner/'])
 *tcid=$all
-/^https:\/\/[0-9a-z]{7,12}\.in(?:\/[a-z]{2,10}){1,3}\?.{200,}$/$script,media,third-party,match-case
+/^https:\/\/[0-9a-z]{7,12}\.in(?:\/[a-z]{2,10}){1,3}\?.{300,}$/$script,media,third-party,match-case
 auction.co.kr,gmarket.co.kr##.plcc_banner
 blog.naver.com,comic.naver.com##[class*='banner_area']
 chimhaha.net,seoul.co.kr,mule.co.kr##[class*='Ad']
@@ -210,7 +210,6 @@ darkgirl12.com,darkgirl13.com,darkgirl14.com##.banner, a[href*="clickadu.net"]
 darkgirl12.com,darkgirl13.com,darkgirl14.com#%#//scriptlet('trusted-click-element', '#adbtn')
 ggbam14.com,ggbam15.com,ggbam16.com##+js(nano-stb, adGate)
 jaddal37.top,jaddal38.top,jaddal39.top##+js(nano-sib, countdown)
-mingky04.live,ydparty04.tv##.grid-asset
 xxzone25.top,xxzone26.top,xxzone27.top##[id*="main-banner"], .gplayer-ad-overlay, #popupBannerModal
 !#if (adguard && adguard_app_ios && adguard_ext_safari && adguard_ext_chromium && adguard_ext_edge && adguard_ext_firefox)
 ###img_row_container
