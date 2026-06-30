@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.06.30
-! TimeUpdated: 2026-06-30T03:51:51+00:00
+! TimeUpdated: 2026-06-30T14:23:30+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -237,6 +237,7 @@ m.cafe.naver.com##.popular_toast_popup
 m.cafe.naver.com##.subscribe_layer_wrap
 m.dcinside.com##.outside-search-box
 m.dcinside.com##section.grid > .md-tit-box:has-text(Daum)
+m.naver.com###MM_AI_TAB_TOOLTIP
 m.naver.com##.chf_feed_wrap > .type_square.cc_clip_list
 m.naver.com##script#MM_search_disaster ~*
 m.search.naver.com##.api_subject_bx div:has(.fds-aib-answer-expand-button-wrapper:not([style*="none"])) + div
