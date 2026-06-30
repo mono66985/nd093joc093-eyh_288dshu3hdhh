@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.06.30
-! TimeUpdated: 2026-06-30T14:23:30+00:00
+! TimeUpdated: 2026-06-30T20:00:57+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -40,7 +40,7 @@ rgr.kr,rgrong.net,te31.com###foot:style(height: 150px !important;)
 rgr.kr,rgrong.net,te31.com##div[style='position:relative;z-index:11;']
 ruliweb.com,ppomppu.co.kr,naver.com,daum.net,etoland.co.kr##[id$='_ad']
 tdgall.com,hygall.com##.admanager-row
-windowsforum.kr,seoul.co.kr,xportsnews.com##.ad
+windowsforum.kr,seoul.co.kr,xportsnews.com,yonhapnewstv.co.kr##.ad
 wowtv.co.kr,cafe.naver.com##[class*='Banner']
 *$script,third-party,domain=nimi.wiki
 *$websocket,domain=bunny-frame.online
@@ -190,6 +190,9 @@ tvseoul.kr##div[style*="width:360px"][style*="height:300px"]
 uppity.co.kr##.adrop-outer
 veritas-a.com##article.grid.body > div.clearfix:has(.ad-template)
 xtoon365.com##[class$='-ad']
+yonhapnewstv.co.kr##.main-banner-area
+yonhapnewstv.co.kr##.view-ad-center
+yonhapnewstv.co.kr##section[class^="popular"]
 yozm.wishket.com##[data-testid="top-banner"]
 yozm.wishket.com##[data-testid^="advertisement-"]
 ||*nestads.*
