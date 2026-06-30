@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.06.29
-! TimeUpdated: 2026-06-29T20:03:41+00:00
+! Version: 2026.06.30
+! TimeUpdated: 2026-06-30T03:51:51+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -277,6 +277,7 @@ shipdago.com,ez2pattern.kr,quizbubble.kr##+js(no-fetch-if, adsbygoogle.js)
 toronon.kr##+js(prevent-fetch, site_id=, emptyObj)
 ||maxmovie.com/_next/static/chunks/framework.aa400efa16f23e2b0cfe.js
 $@$link[rel="manifest"]
+ktmmobile.com#@%#//scriptlet('set-constant', 'mainBottomBanner', 'noopFunc')
 m.fmkorea.com#@$?#*.bd.bd_mobile:not(:has(#bd_capture ~ #comment)):has(form[action="./"]:matches-css(height: auto)) { remove: true; }
 mlbpark.donga.com#@$#div[id^="SmartPhone_"][id$="_today"] .lists > li::before { padding-top: 0px !important; border-bottom: none !important; }
 sooplive.com#@%#//scriptlet('json-prune-xhr-response', 'data.adballoon', '', 'station/video/a/view')
