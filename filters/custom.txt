@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.06.30
-! TimeUpdated: 2026-06-30T20:00:57+00:00
+! Version: 2026.07.01
+! TimeUpdated: 2026-07-01T04:05:45+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -11,7 +11,7 @@
 ##.happy-under-player-mobile
 ##.textwidget
 ##[alt$='광고']
-##[class*='ad'][id^='AD']:not([class*='address'])
+##[class*='ad'][id^='AD']:not([class*='add'])
 ##[class^='basic-banner'][id]
 ##[class^='happy-header']
 ##[id^='hd_pop']
