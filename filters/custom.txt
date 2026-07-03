@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.07.03
-! TimeUpdated: 2026-07-03T03:27:55+00:00
+! TimeUpdated: 2026-07-03T19:25:26+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -77,7 +77,6 @@ chimhaha.net##div[style='margin-top: 50px; ']
 coinpan.com##li:has(> span.wgp_ad)
 coinpan.com##li:has(ins.adsbygoogle)
 coinpan.com##p > strong > span:contains(AD):upward(p)
-cola16.app##+js(acis, decodeURIComponent, ABCDEFGHIJKLMNOPQRSTUVWXYZ)
 community.rememberapp.co.kr##[alt="배너 광고 이미지"]
 damoang.net##.dm-card:has(#gam-index-top-damoang-banner-index)
 daum.net##div[data-slot-type="AD_BRANDING_STATION"]
@@ -117,6 +116,7 @@ kidd.co.kr##.bottomAdBox
 kidd.co.kr##.product-recommendations
 kidd.co.kr##slidebanner
 kissjav.*##+js(nowoif)
+lawtimes.co.kr###top-banner
 linkareer.com##[role="advertisement"]:not([class^="card-item"])
 linkareer.com##ins.adsbygoogle:upward(div[style*="min-height"])
 litomi.cc##[data-juicy-ads-slot]
@@ -266,6 +266,7 @@ aagag.com##+js(set-cookie, ab, 0)
 aagag.com#$#.la { position: absolute !important; left: -3000px !important; width: 60px !important; height: 20px !important; }
 chatgpts.kr,free4u.tistory.com##+js(nostif, checkAdBlock)
 chatgpts.kr,free4u.tistory.com##+js(nostif, checkRealAdBlock)
+cola16.app##+js(acis, decodeURIComponent, ABCDEFGHIJKLMNOPQRSTUVWXYZ)
 damoang.net##+js(nostif, bait_hidden)
 dcinside.com###moveOverlay, #gaejukimg
 hmstory.net$$script:contains(detect-message-shown)
