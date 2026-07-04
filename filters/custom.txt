@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.07.03
-! TimeUpdated: 2026-07-03T19:25:26+00:00
+! Version: 2026.07.04
+! TimeUpdated: 2026-07-04T19:16:36+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -116,6 +116,7 @@ kidd.co.kr##.bottomAdBox
 kidd.co.kr##.product-recommendations
 kidd.co.kr##slidebanner
 kissjav.*##+js(nowoif)
+kyeongin.com##.horizon-ad
 lawtimes.co.kr###top-banner
 linkareer.com##[role="advertisement"]:not([class^="card-item"])
 linkareer.com##ins.adsbygoogle:upward(div[style*="min-height"])
@@ -204,6 +205,7 @@ yozm.wishket.com##[data-testid^="advertisement-"]
 ||kamp.kakao.com^$app=com.kakao.talk
 ||link.coupang.com/re/AFFHOME?lptag=*&amp;subid=pointlink$all,reason=수익링크
 ||pandalive.co.kr^$document,domain=heye.kr
+||player.bunny-frame.online/js/ad_fetcher.js
 ||shortformstats.kakao.com^$app=com.kakao.talk
 ||t*kor*.com/images/
 ||thumb.kakaocdn.net^$app=com.kakao.talk
