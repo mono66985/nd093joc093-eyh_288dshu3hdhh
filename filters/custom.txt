@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.07.04
-! TimeUpdated: 2026-07-04T19:16:36+00:00
+! Version: 2026.07.05
+! TimeUpdated: 2026-07-05T19:20:20+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -60,8 +60,8 @@ wowtv.co.kr,cafe.naver.com##[class*='Banner']
 3rd.supply##.text-center:has(sp-common-adsense)
 algumon.com##div:has([data-tip^='파트너스'], div[style*='height'], ins):is(.card, .deal-2col)
 arca.live##.vrow.hybrid:has(.category-badge)
-asked.kr##div[class*="index_"] div[class*="banner_"]
-asked.kr##div[class^="kad_"]:has(ins.kakao_ad_area)
+asked.kr##div[class^="index_"] div[class^="banner_"]
+asked.kr##div[class^="kad_"]
 avdbs.com##.ad-btn[class*='tp']
 avsee.ru##+js(acis, decodeURI, split)
 avsee.ru##.at-main > div.main-box > .miso-post-mix .post-wrap
@@ -123,6 +123,7 @@ linkareer.com##ins.adsbygoogle:upward(div[style*="min-height"])
 litomi.cc##[data-juicy-ads-slot]
 loawa.com##[aria-label="광고 팝업"]
 loawa.com##[data-ad-placement]
+m.10000recipe.com##li:has(div.rcp_list2022_new_cont > div:contains(AD))
 m.anewsa.com##div[style*="width:300px"]
 m.bobaedream.co.kr##div[style$='height:50px;']
 m.danawa.com###mdnw-main-dimm, #mdnw-main-bottomSheet-container
