@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.07.07
-! TimeUpdated: 2026-07-07T03:36:09+00:00
+! TimeUpdated: 2026-07-07T14:39:18+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -172,8 +172,6 @@ ppomppu.co.kr##.bottom > div[style]
 ppomppu.co.kr##tr[id*="_list_ad_"]
 ppomppu.co.kr$$tr:has-text(AD)
 red52.kr##.notice-box-area, .banner-pc, .banner-m
-samgakgame.com###homeAdSlot, #bannerAd, #resultBannerAd, #frontAdMedia
-samgakgame.com##+js(nano-sib, adRemaining)
 search.danawa.com##[id^='powerShoppingArea']
 search.danawa.com##li[data-itemtype='adsmart']
 seoul.co.kr###bottomScrollBox
