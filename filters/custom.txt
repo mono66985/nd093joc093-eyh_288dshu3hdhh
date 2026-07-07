@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.07.07
-! TimeUpdated: 2026-07-07T14:39:18+00:00
+! TimeUpdated: 2026-07-07T19:57:52+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -139,6 +139,10 @@ m.ppomppu.co.kr##ul:has(> .mobile-ad-sponsor)
 m.ruliweb.com##aside.native_timeline_ad
 m.ruliweb.com##tr:has(.nbp_container)
 m.wowtv.co.kr##.container > div[style]
+mbong.kr##.ink_slide
+mbong.kr##.right_banne
+mbong.kr##div:has(> a > img[alt$="배너"])
+mbong.kr##div:has(> div[id^="ad-"])
 mimint.co.kr###anchor-layer:has(.anchor-slot)
 mimint.co.kr##.ads-container
 mimint.co.kr##.banner-split-reveal
@@ -230,6 +234,7 @@ hitomi.la##div:has(> [id^="__clb-spot"])
 arca.live##a:has(img[src*="karisuma-point-x2.png"])
 gall.dcinside.com##.dc_all
 gall.dcinside.com##.dcmedia.content_box
+gall.dcinside.com##.ltr
 gall.dcinside.com##.r_dcmedia
 gall.dcinside.com##tr[class='ub-content ']
 inven.co.kr##.inven-float-alarm
