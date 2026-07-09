@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.07.09
-! TimeUpdated: 2026-07-09T03:29:32+00:00
+! TimeUpdated: 2026-07-09T09:47:13+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -74,7 +74,7 @@ chimhaha.net##[id^='slot']
 chimhaha.net##div[style='margin-top: 50px; ']
 coinpan.com##li:has(> span.wgp_ad)
 coinpan.com##li:has(ins.adsbygoogle)
-coinpan.com##p > strong > span:contains(AD):upward(p)
+coinpan.com##p > strong > span:has-text(AD):upward(p)
 community.rememberapp.co.kr##[alt="배너 광고 이미지"]
 damoang.net##.dm-card:has(#gam-index-top-damoang-banner-index)
 daum.net##div[data-slot-type="AD_BRANDING_STATION"]
@@ -212,6 +212,7 @@ yozm.wishket.com##[data-testid^="advertisement-"]
 ||link.coupang.com/re/AFFHOME?lptag=*&amp;subid=pointlink$all,reason=수익링크
 ||pandalive.co.kr^$document,domain=heye.kr
 ||player.bunny-frame.online/js/ad_fetcher.js
+||red52.kr/ads
 ||shortformstats.kakao.com^$app=com.kakao.talk
 ||t*kor*.com/images/
 ||thumb.kakaocdn.net^$app=com.kakao.talk
