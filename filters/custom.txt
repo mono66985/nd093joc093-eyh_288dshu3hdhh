@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.07.09
-! TimeUpdated: 2026-07-09T19:48:49+00:00
+! Version: 2026.07.10
+! TimeUpdated: 2026-07-10T03:31:36+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -232,7 +232,8 @@ xxzone25.top,xxzone26.top,xxzone27.top##[id*="main-banner"], .gplayer-ad-overlay
 ##.banner_wrap2
 !#endif
 !#if (adguard_app_ios || adguard_ext_safari) && !adguard_app_mac
-/^https:\/\/[a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z]?[0-9a-z]?[0-9a-z]?[0-9a-z]?\.com\/[a-z][a-z][a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?(\/[a-z][a-z][a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?)?(\/[a-z][a-z][a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?)?\?[0-9a-zA-Z][0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?=[0-9a-zA-Z%][0-9a-zA-Z%]?[0-9a-zA-Z%]?[0-9a-zA-Z%]?[0-9a-zA-Z%]?[0-9a-zA-Z%]?&[0-9a-zA-Z][0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?=[0-9a-zA-Z%.-]+&[0-9a-zA-Z][0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?=[0-9a-zA-Z%.-]+.*&[a-z][a-z]?[a-z]?[a-z]?[a-z]?[a-z]?=[0-9][0-9]?[0-9]?[0-9]?[0-9]?[0-9]?$/$script,third-party,match-case
+/^https:\/\/[a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z]?[0-9a-z]?[0-9a-z]?[0-9a-z]?\.com\/[a-z][a-z][a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?(\/[a-z][a-z][a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?)?(\/[a-z][a-z][a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?)?\?[0-9a-zA-Z][0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?=[0-9a-zA-Z%][0-9a-zA-Z%]?[0-9a-zA-Z%]?[0-9a-zA-Z%]?[0-9a-zA-Z%]?[0-9a-zA-Z%]?&[0-9a-zA-Z][0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?=[0-9a-zA-Z%._-]+&[0-9a-zA-Z][0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?=[0-9a-zA-Z%._-]+&.*&[a-z][a-z][a-z][a-z][a-z][a-z][a-z]=[0-9]\.[0-9]\.[0-9][0-9]-[a-z][a-z].*$/$script,third-party,match-case
+/^https:\/\/[a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z][0-9a-z]?[0-9a-z]?[0-9a-z]?[0-9a-z]?\.com\/[a-z][a-z][a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?(\/[a-z][a-z][a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?)?(\/[a-z][a-z][a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?[a-z]?)?\?[0-9a-zA-Z][0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?=[0-9a-zA-Z%][0-9a-zA-Z%]?[0-9a-zA-Z%]?[0-9a-zA-Z%]?[0-9a-zA-Z%]?[0-9a-zA-Z%]?&[0-9a-zA-Z][0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?=[0-9a-zA-Z%._-]+&[0-9a-zA-Z][0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?[0-9a-zA-Z]?=[0-9a-zA-Z%._-]+&.*&[a-z][a-z][a-z]=[A-Z][a-z][a-z][a-z][a-z]%20[A-Z][a-zA-Z][a-zA-Z][.]?.*$/$script,third-party,match-case
 hitomi.la##+js(nowoif)
 hitomi.la##div:has(> [id^="__clb-spot"])
 !#endif
