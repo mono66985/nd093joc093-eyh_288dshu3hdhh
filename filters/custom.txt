@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.07.11
-! TimeUpdated: 2026-07-11T19:06:21+00:00
+! Version: 2026.07.12
+! TimeUpdated: 2026-07-12T02:56:01+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -227,12 +227,12 @@ zod.kr##div[id]:has(> [target] > img)
 ||trillion.toss.im^
 bamgad7.com,bamgad8.com,bamgad9.com##ul.row:has(img[src*="/file/advertise/"])
 bampt6.com,bampt7.com,bampt8.com##.small-banners-grid, .small-ad-item, .premium-banner-wrapper
-darkgirl12.com,darkgirl13.com,darkgirl14.com###adskip, #posterWrap, #main-banner
-darkgirl12.com,darkgirl13.com,darkgirl14.com##.banner, a[href*="clickadu.net"]
-darkgirl12.com,darkgirl13.com,darkgirl14.com#%#//scriptlet('trusted-click-element', '#adbtn')
+darkgirl13.com,darkgirl14.com,darkgirl15.com###adskip, #posterWrap, #main-banner
+darkgirl13.com,darkgirl14.com,darkgirl15.com##.banner, a[href*="clickadu.net"]
+darkgirl13.com,darkgirl14.com,darkgirl15.com#%#//scriptlet('trusted-click-element', '#adbtn')
 ggbam14.com,ggbam15.com,ggbam16.com##+js(nano-stb, adGate)
 jaddal37.top,jaddal38.top,jaddal39.top##+js(nano-sib, countdown)
-xxzone25.top,xxzone26.top,xxzone27.top##[id*="main-banner"], .gplayer-ad-overlay, #popupBannerModal
+xxzone26.top,xxzone27.top,xxzone28.top##[id*="main-banner"], .gplayer-ad-overlay, #popupBannerModal
 !#if (adguard && adguard_app_ios && adguard_ext_safari && adguard_ext_chromium && adguard_ext_edge && adguard_ext_firefox)
 ###img_row_container
 ###viewCover
