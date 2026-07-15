@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.07.15
-! TimeUpdated: 2026-07-15T13:46:47+00:00
+! TimeUpdated: 2026-07-15T19:14:06+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -75,6 +75,7 @@ bunjang.co.kr##div[class*="ProductExternalAdsstyle"]:has(h3:has-text(비슷한 �
 bunjang.co.kr##section:has(> [class*="adTitle"]):has-text(AD)
 chimhaha.net##[id^='slot']
 chimhaha.net##div[style='margin-top: 50px; ']
+chuchu.gg##.ad-container
 coinpan.com##li:has(> span.wgp_ad)
 coinpan.com##li:has(ins.adsbygoogle)
 coinpan.com##p > strong > span:has-text(AD):upward(p)
