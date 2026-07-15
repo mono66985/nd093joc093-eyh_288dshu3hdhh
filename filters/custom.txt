@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.07.15
-! TimeUpdated: 2026-07-15T02:36:44+00:00
+! TimeUpdated: 2026-07-15T13:46:47+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -59,7 +59,7 @@ wowtv.co.kr,cafe.naver.com##[class*='Banner']
 3rd.supply##.h-hori-ad
 3rd.supply##.text-center:has(sp-common-adsense)
 algumon.com##div:has([data-tip^='파트너스'], div[style*='height'], ins):is(.card, .deal-2col)
-arca.live##.vrow.hybrid:has(.category-badge)
+arca.live##.category-badge:has-text(광고):upward(.vrow.hybrid)
 asked.kr##div[class^="index_"] div[class^="banner_"]
 asked.kr##div[class^="kad_"]
 avdbs.com##.ad-btn[class*='tp']
