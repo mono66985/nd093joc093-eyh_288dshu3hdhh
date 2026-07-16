@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.07.16
-! TimeUpdated: 2026-07-16T13:56:08+00:00
+! TimeUpdated: 2026-07-16T19:14:10+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -30,7 +30,7 @@ hungryapp.co.kr,hungapp.com##.fixed-top
 hungryapp.co.kr,hungapp.com##[aria-label="헝그리앱 배너"]
 inven.co.kr,mt.co.kr##[class$='ads']
 inven.co.kr,wowtv.co.kr,damoang.net,hungryapp.co.kr,hungapp.com##[class*='-banner']
-linkareer.com,m.ppomppu.co.kr,ggoorr.net,coinpan.com,shipdago.com,outstanding.kr,dispatch.co.kr##div:has(> ins.adsbygoogle)
+linkareer.com,m.ppomppu.co.kr,ggoorr.net,coinpan.com,shipdago.com,outstanding.kr,dispatch.co.kr,namechart.kr##div:has(> ins.adsbygoogle)
 m.cafe.daum.net,bokuennews.com##[class*='_banner']
 m.wowtv.co.kr,inven.co.kr##[id*='Banner']
 maplescouter.com,loawa.com###popup
@@ -46,7 +46,6 @@ wowtv.co.kr,cafe.naver.com##[class*='Banner']
 *$websocket,domain=bunny-frame.online
 [$domain=/^fxfx[0-9]*\.com/]##.top-banner
 [$domain=/^hoohootv[0-9]*\.[a-z]{2,}/]###img_row_container
-[$domain=/^redvi[0-9]*\.com/]##div[style*="z-index: 9999"]:has(img[src*="/banners/"]), img[src*="/banners/"]
 [$domain=/^toki[0-9]*\.com/]##.vw-swipe-hint, [data-pm-ov="1"]
 [$domain=/^tvmon[0-9]*\.[a-z]{2,}/]##.banner_wrap2
 [$domain=/^tvwiki[0-9]*\.net/]###bannerList, #viewCover, img[src*="/banner/"]
@@ -55,7 +54,6 @@ wowtv.co.kr,cafe.naver.com##[class*='Banner']
 [$domain=/^wtwt[0-9]*\.com/]##.banner
 [$domain=/torrent[a-z0-9]*\.[a-z]{2,}/]##[href*='/ad'][target='_blank']:has(img)
 [$domain=/torrent[a-z0-9]*\.[a-z]{2,}/]##div[class$='gallery'][id] [target='_blank']:upward(1)
-[$domain=/yadongtv[0-9]*\.com/]##div[style*="top: 215px"]:has(img[src*="/banners/"]), img[src*="/banners/"]
 3rd.supply##.h-hori-ad
 3rd.supply##.text-center:has(sp-common-adsense)
 algumon.com##div:has([data-tip^='파트너스'], div[style*='height'], ins):is(.card, .deal-2col)
@@ -233,10 +231,10 @@ zod.kr##div[id]:has(> [target] > img)
 ||thumb.kakaocdn.net^$app=com.kakao.talk
 ||trillion.toss.im^
 bamgad7.com,bamgad8.com,bamgad9.com##ul.row:has(img[src*="/file/advertise/"])
-darkgirl13.com,darkgirl14.com,darkgirl15.com###adskip, #posterWrap, #main-banner
-darkgirl13.com,darkgirl14.com,darkgirl15.com##.banner, a[href*="clickadu.net"]
-darkgirl13.com,darkgirl14.com,darkgirl15.com#%#//scriptlet('trusted-click-element', '#adbtn')
-ggbam14.com,ggbam15.com,ggbam16.com##+js(nano-stb, adGate)
+darkgirl14.com,darkgirl15.com,darkgirl16.com###adskip, #posterWrap, #main-banner
+darkgirl14.com,darkgirl15.com,darkgirl16.com##.banner, a[href*="clickadu.net"]
+darkgirl14.com,darkgirl15.com,darkgirl16.com#%#//scriptlet('trusted-click-element', '#adbtn')
+ggbam16.com,ggbam17.com,ggbam18.com##+js(nano-stb, adGate)
 jaddal37.top,jaddal38.top,jaddal39.top##+js(nano-sib, countdown)
 xxzone26.top,xxzone27.top,xxzone28.top##[id*="main-banner"], .gplayer-ad-overlay, #popupBannerModal
 !#if (adguard && adguard_app_ios && adguard_ext_safari && adguard_ext_chromium && adguard_ext_edge && adguard_ext_firefox)
