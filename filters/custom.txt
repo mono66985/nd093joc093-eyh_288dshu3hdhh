@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.07.17
-! TimeUpdated: 2026-07-17T19:12:41+00:00
+! Version: 2026.07.18
+! TimeUpdated: 2026-07-18T19:07:28+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -50,7 +50,6 @@ wowtv.co.kr,cafe.naver.com##[class*='Banner']
 [$domain=/^tvmon[0-9]*\.[a-z]{2,}/]##.banner_wrap2
 [$domain=/^tvwiki[0-9]*\.net/]###bannerList, #viewCover, img[src*="/banner/"]
 [$domain=/^wftoon[0-9]*\.com/]##.top-banner
-[$domain=/^wfwf[0-9]*\.com/]##.top-banner
 [$domain=/^wtwt[0-9]*\.com/]##.banner
 [$domain=/torrent[a-z0-9]*\.[a-z]{2,}/]##[href*='/ad'][target='_blank']:has(img)
 [$domain=/torrent[a-z0-9]*\.[a-z]{2,}/]##div[class$='gallery'][id] [target='_blank']:upward(1)
@@ -92,6 +91,7 @@ dschool.co.kr###modal-banner
 dschool.co.kr##[id="lean_overlay"]
 dvdprime.com##[id$='top_banner']
 dvdprime.com##[id^='ad_mobile']
+dvdprime.com##[id^='slot-']
 ebs.co.kr##.ji_adban
 edu.chosun.com##a:has(> [src*="edu.chosun.com/images/bn/"])
 edu.chosun.com##section:has(> [id^="AD_Main_"])
