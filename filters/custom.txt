@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.07.19
-! TimeUpdated: 2026-07-19T13:20:31+00:00
+! TimeUpdated: 2026-07-19T19:08:54+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -95,6 +95,8 @@ dvdprime.com##[id^='slot-']
 ebs.co.kr##.ji_adban
 edu.chosun.com##a:has(> [src*="edu.chosun.com/images/bn/"])
 edu.chosun.com##section:has(> [id^="AD_Main_"])
+encar.com##[class*="Banner_wrap"]
+encar.com##li > a[class*="RecommendQuick_link_quick__"][href^="https://automotive.encar.com/RealMedia/ads/"][target="_blank"]
 ez2pattern.kr##.sticky
 fc-info.com##div[class^='Venatus_']
 fmkorea.com##[class$='_ad']
