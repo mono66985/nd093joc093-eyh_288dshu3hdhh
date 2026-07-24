@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.07.23
-! TimeUpdated: 2026-07-23T19:20:19+00:00
+! Version: 2026.07.24
+! TimeUpdated: 2026-07-24T02:48:16+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -55,7 +55,6 @@ wowtv.co.kr,cafe.naver.com##[class*='Banner']
 [$domain=/torrent[a-z0-9]*\.[a-z]{2,}/]##div[class$='gallery'][id] [target='_blank']:upward(1)
 3rd.supply##.h-hori-ad
 3rd.supply##.text-center:has(sp-common-adsense)
-ajunews.com##div.article_con > div > div[style*="580px;"]
 algumon.com##div:has([data-tip^='파트너스'], div[style*='height'], ins):is(.card, .deal-2col)
 arca.live##.category-badge:has-text(광고):upward(.vrow.hybrid)
 asked.kr##div[class^="index_"] div[class^="banner_"]
@@ -68,6 +67,7 @@ avsee.ru##[alt$='gif']
 battlepage.com##div[style$="min-height:200px;"]:has(ins.adsbyaiinad)
 bbs.ruliweb.com##div.clear:has([style*='overflow-x'])
 bbs.ruliweb.com##tr:has(.nick[style^='display: inline-block'])
+biz.chosun.com##aside > div.flex-chain-wrapper:has(> section > div > .raw-html > iframe[width="300"])
 boutique.chosun.com###bo_main_modalWrap
 bunjang.co.kr##div[class*="ProductExternalAdsstyle"]:has(h3:has-text(비슷한 새 상품 보기))
 bunjang.co.kr##section:has(> [class*="adTitle"]):has-text(AD)
@@ -218,6 +218,7 @@ tiendeo.co.kr##section.justify-center:has([id^="div-gpt-ad-web"])
 tvseoul.kr##div[style*="width:360px"][style*="height:300px"]
 uppity.co.kr##.adrop-outer
 veritas-a.com##article.grid.body > div.clearfix:has(.ad-template)
+wadiz.kr##[class^="MultiBoardAdBannerDisplay-"]
 xtoon365.com##[class$='-ad']
 yonhapnewstv.co.kr##.main-banner-area
 yonhapnewstv.co.kr##.view-ad-center
@@ -239,12 +240,12 @@ zod.kr##div[id]:has(> [target] > img)
 ||t*kor*.com/images/
 ||thumb.kakaocdn.net^$app=com.kakao.talk
 ||trillion.toss.im^
-bamgad7.com,bamgad8.com,bamgad9.com##ul.row:has(img[src*="/file/advertise/"])
+bamgad8.com,bamgad9.com,bamgad10.com##ul.row:has(img[src*="/file/advertise/"])
 darkgirl14.com,darkgirl15.com,darkgirl16.com###adskip, #posterWrap, #main-banner
 darkgirl14.com,darkgirl15.com,darkgirl16.com##.banner, a[href*="clickadu.net"]
 darkgirl14.com,darkgirl15.com,darkgirl16.com#%#//scriptlet('trusted-click-element', '#adbtn')
 ggbam16.com,ggbam17.com,ggbam18.com##+js(nano-stb, adGate)
-jaddal37.top,jaddal38.top,jaddal39.top##+js(nano-sib, countdown)
+jaddal38.top,jaddal39.top,jaddal40.top##+js(nano-sib, countdown)
 xxzone26.top,xxzone27.top,xxzone28.top##[id*="main-banner"], .gplayer-ad-overlay, #popupBannerModal
 !#if (adguard && adguard_app_ios && adguard_ext_safari && adguard_ext_chromium && adguard_ext_edge && adguard_ext_firefox)
 ###img_row_container
