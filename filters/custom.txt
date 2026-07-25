@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.07.24
-! TimeUpdated: 2026-07-24T19:26:24+00:00
+! Version: 2026.07.25
+! TimeUpdated: 2026-07-25T02:47:16+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -128,7 +128,7 @@ khan.co.kr##[class^="ad-art-"]
 kidd.co.kr##.bottomAdBox
 kidd.co.kr##.product-recommendations
 kidd.co.kr##slidebanner
-kissjav.*##+js(nowoif)
+kissjav.*##+js(nowoif, !kissjav)
 kloa.gg##div[class*="min-h-"]:has(> div[id]:empty):not(:has(a))
 kyeongin.com##.horizon-ad
 lawtimes.co.kr###top-banner
@@ -261,7 +261,7 @@ hitomi.la##div:has(> [id^="__clb-spot"])
 namu.wiki#%#!function(){const e=document.createElement("style");e.textContent=".agf-h{display:none!important}",document.documentElement.appendChild(e);const n=()=>{t.disconnect();const e=document.evaluate("//div[descendant::div and not(descendant-or-self::*[not(self::div)]) and normalize-space() = '' and not(descendant-or-self::*/@*[not(name()='class' or name()='id' or starts-with(name(), 'data-v-') or (name()='style' and normalize-space()=''))])]",document,null,7,null),n=new Set;for(let t=0;t<e.snapshotLength;t++)n.add(e.snapshotItem(t));document.querySelectorAll(".agf-h").forEach(e=>n.has(e)||e.classList.remove("agf-h")),n.forEach(e=>e.classList.contains("agf-h")||e.classList.add("agf-h")),t.observe(document.documentElement,{childList:!0,subtree:!0})},t=new MutationObserver(n);n()}();
 namu.wiki##div[class]:has(> ins.adsbygoogle:empty):not(:has(a))
 !#endif
-arca.live##a:has(img[src*="karisuma-point-x2.png"])
+arca.live##a:has(img[src*="/static/assets/images/karisuma-point"])
 gall.dcinside.com##.dc_all
 gall.dcinside.com##.dcmedia.content_box
 gall.dcinside.com##.ltr
