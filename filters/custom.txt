@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.08.08
-! TimeUpdated: 2026-08-08T12:51:07+00:00
+! Version: 2026.08.11
+! TimeUpdated: 2026-08-11T13:08:26+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -375,7 +375,7 @@ www.google.com##.MjjYud:not(:has([data-id="mosaic"])):has(img[src^="data:image/p
 www.google.com##.MjjYud:not(:has([data-id="mosaic"])):has(img[src^="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAsVBMVEVHcEzf4uXQz8yxranO1dq00ewAAACin5yFgHtNRj/Av77Q2N/P2ODBz9u1xdKJhoG7yNXe39+8uLTe3t6IhH7JzM+IhYHJzdDJzM3///8BT5UAVaIARYMASosBXK4APHQAQXsAacYANmwAYrsFcM8BdNozX4qVqsD0+PycweQdTn8xesA8d66Wss50krKAq9cegt/s9fxrm8txr"]):has([data-snhf])
 arca.live##.vcol.col-title .comment-count:hover:style(background-color: #cccccc !important; color: white !important;)
 arca.live##.vcol.col-title .comment-count:style(display: inline-block !important; padding: 6px 5px 6px 3px !important; margin: -6px -5px -6px -3px !important; position: relative; z-index: 10;)
-arca.live#%#const _s=document.documentElement.appendChild(Object.assign(document.createElement("style"),{textContent:'a.notice .vcol.col-ad .badge.text-bg-success,a.notice .vcol.col-id>b{visibility:hidden}'}));document.addEventListener("DOMContentLoaded",()=>{const t=document.querySelector("div.list-table");if(!t){_s.remove();return;}const s=()=>{const e=t.querySelector('a.notice[href*="/b/"]');if(!e)return;const g=e.pathname.split("/b/")[1]?.split("/")[0];if(!g)return;const b=e.querySelector(".vcol.col-ad .badge.text-bg-success"),i=e.querySelector(".vcol.col-id>b");if(b)b.textContent=g;if(i)i.textContent=g;if(b||i)_s.remove()};s();let r;new MutationObserver(()=>{clearTimeout(r);r=setTimeout(s,100)}).observe(t,{childList:!0,subtree:!0})});
+arca.live#%#(()=>{const N="nrx",S='a.notice[href*="/b/"] .vcol.col-ad>.badge.text-bg-success,a.notice[href*="/b/"] .vcol.col-id>b';document.documentElement.appendChild(Object.assign(document.createElement("style"),{textContent:`${S}{visibility:hidden;animation:${N} 1ms}@keyframes ${N}{to{}}`}));addEventListener("animationstart",e=>{if(e.animationName!==N)return;const g=/\/b\/([^/]+)/.exec(e.target.closest("a.notice").pathname)?.[1];if(g){e.target.textContent=g;e.target.style.visibility="visible"}},true)})();
 dcinside.com#%#//scriptlet('trusted-create-element', 'head', 'meta', 'name="theme-color" content="#2b367d"')
 dmm.co.jp#%#//scriptlet('trusted-set-cookie-reload', 'ckcy_remedied_check', 'ec_mrnhbtk', '1year', '/', '.dmm.co.jp')
 gall.dcinside.com##+js(aeld, contextmenu, , elements, video)
