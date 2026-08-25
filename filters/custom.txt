@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.08.24
-! TimeUpdated: 2026-08-24T18:41:33+00:00
+! Version: 2026.08.25
+! TimeUpdated: 2026-08-25T06:50:29+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -15,7 +15,6 @@
 ##[class*='ad'][id^='AD']:not([class*='add'])
 ##[class^='basic-banner'][id]
 ##[class^='happy-header']
-##[data-brs][data-br]
 ##[id^='hd_pop']
 *##[target='_blank']:has([src*='/banner/']):not([title^='새']):not([class*='slide'] > *)
 *tcid=$all
@@ -261,6 +260,7 @@ zod.kr##div[id]:has(> [target] > img)
 ||dvdprime.com/file/*/banner
 ||kamp.kakao.com^$app=com.kakao.talk
 ||link.coupang.com/re/AFFHOME*subid=pointlink$all,reason=수익링크
+||link.coupang.com/re/AFFSDP*?subid=dynamicda$all,reason=수익링크
 ||pandalive.co.kr^$document,domain=heye.kr
 ||player.bunny-frame.online/js/ad_fetcher.js
 ||red52.kr/ads
