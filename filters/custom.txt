@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.08.27
-! TimeUpdated: 2026-08-27T21:55:47+00:00
+! Version: 2026.09.05
+! TimeUpdated: 2026-09-05T20:03:07+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -12,10 +12,11 @@
 ##.happy-under-player-mobile
 ##.textwidget
 ##[alt$='광고']
-##[class*='ad'][id^='AD']:not([class*='add'])
+##[class*='ad'][id^='AD']:not([class*='add']):not([id*='ADD'])
 ##[class^='basic-banner'][id]
 ##[class^='happy-header']
 ##[id^='hd_pop']
+#$#button[data-banner-id] { mix-blend-mode: hue !important; }
 *##[target='_blank']:has([src*='/banner/']):not([title^='새']):not([class*='slide'] > *)
 *tcid=$all
 auction.co.kr,gmarket.co.kr##.plcc_banner
@@ -49,7 +50,8 @@ wowtv.co.kr,cafe.naver.com##[class*='Banner']
 [$domain=/^fxfx[0-9]*\.com/]##.top-banner
 [$domain=/^hoohootv[0-9]*\.[a-z]{2,}/]###img_row_container
 [$domain=/^mingky[0-9]*\.[a-z]{2,}/]##a.grid-asset[target="_blank"]:has(> img[alt])
-[$domain=/^toki[0-9]*\.com/]##.vw-swipe-hint, [data-pm-ov="1"]
+[$domain=/^sbxh[0-9]*\.com/]##.vw-swipe-hint, [data-pm-ov]
+[$domain=/^toki[0-9]*\.com/]##.vw-swipe-hint, [data-pm-ov]
 [$domain=/^tvmon[0-9]*\.[a-z]{2,}/]##.banner_wrap2
 [$domain=/^tvroom[0-9]*\.org/]##a[href*="/banner/"][target="_blank"]
 [$domain=/^tvwiki[0-9]*\.net/]###bannerList, #viewCover, img[src*="/banner/"]
@@ -249,7 +251,9 @@ yonhapnewstv.co.kr##section[class^="popular"]
 youthassembly.kr##.coupang-box
 yozm.wishket.com##[data-testid="top-banner"]
 yozm.wishket.com##[data-testid^="advertisement-"]
-zod.kr##div[id]:has(> [target] > img)
+zod.kr##.app-footer > div > nav[style*='height']
+zod.kr##.app-header-menu__content > div > [href^='https://zod.kr/go']
+zod.kr##.app-mobile-only:has(> div > a[target] > img)
 ||*nestads.*
 ||ader.naver.com/*?c=m_$all,reason=파워링크
 ||ader.naver.com/v1/$all,reason=파워링크
@@ -378,8 +382,6 @@ www.google.com##.MjjYud:has(img[src^="data:image/png;base64,iVBORw0KGgoAAAANSUhE
 www.google.com##.MjjYud:has(img[src^="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAXVBMVEU4Yr8sW70mWLwyXr6arNvFzejAyudqh82isdyHnNSQpNj///87ZcA1YL7S2e6tu+FOc8Xc4/MqWrwZUrp+ltNXesiqueHp7vjJ0+xCacJ5ktH2+Pzf5fO4xOZVdsaBYy7xAAAAfElEQVR4Ad3LBRKEMBBE0RG8M7jb/Y+5m6IMuwAfoq9CH4xFRI9Vr6ZBGEaxEidhmF6UM"]):has([data-snhf])
 www.google.com##.MjjYud:has(img[src^="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAllBMVEVHcEyJhoLQz8yxram3xtSyzunf4uWin5xOR0DO1drJzc/Q2N/P2OCIhH+AeXPAv768uLTe39/e3t7Avr3///8APncARIEATpQASYsANm0Db88AZ8MAWKgAYLUDU51QgrQFdtuWscrv9vyNqMOYveJzkrMsXYy/2O8mg9oHXqopdLh0relpnNDW5PEXSn32+v0pVYFCbJZQLYoEAAAAFHRSTlMAIn8w/P7MQgrRp+jyNB9sULGxbLaiZEAAAAGhSURB"]):has([data-snhf])
 www.google.com##.MjjYud:has(img[src^="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAsVBMVEVHcEzf4uXQz8yxranO1dq00ewAAACin5yFgHtNRj/Av77Q2N/P2ODBz9u1xdKJhoG7yNXe39+8uLTe3t6IhH7JzM+IhYHJzdDJzM3///8BT5UAVaIARYMASosBXK4APHQAQXsAacYANmwAYrsFcM8BdNozX4qVqsD0+PycweQdTn8xesA8d66Wss50krKAq9cegt/s9fxrm8txr"]):has([data-snhf])
-arca.live##.vcol.col-title .comment-count:hover:style(background-color: #cccccc !important; color: white !important;)
-arca.live##.vcol.col-title .comment-count:style(display: inline-block !important; padding: 6px 5px 6px 3px !important; margin: -6px -5px -6px -3px !important; position: relative; z-index: 10;)
 arca.live#%#(()=>{const N="nrx",S='a.notice[href*="/b/"] .vcol.col-ad>.badge.text-bg-success,a.notice[href*="/b/"] .vcol.col-id>b';document.documentElement.appendChild(Object.assign(document.createElement("style"),{textContent:`${S}{visibility:hidden;animation:${N} 1ms}@keyframes ${N}{to{}}`}));addEventListener("animationstart",e=>{if(e.animationName!==N)return;const g=/\/b\/([^/]+)/.exec(e.target.closest("a.notice").pathname)?.[1];if(g){e.target.textContent=g;e.target.style.visibility="visible"}},true)})();
 dcinside.com#%#//scriptlet('trusted-create-element', 'head', 'meta', 'name="theme-color" content="#2b367d"')
 dmm.co.jp#%#//scriptlet('trusted-set-cookie-reload', 'ckcy_remedied_check', 'ec_mrnhbtk', '1year', '/', '.dmm.co.jp')
