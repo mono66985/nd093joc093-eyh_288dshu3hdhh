@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.09.05
-! TimeUpdated: 2026-09-05T20:03:07+00:00
+! Version: 2026.09.08
+! TimeUpdated: 2026-09-08T10:48:31+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -18,7 +18,7 @@
 ##[id^='hd_pop']
 #$#button[data-banner-id] { mix-blend-mode: hue !important; }
 *##[target='_blank']:has([src*='/banner/']):not([title^='새']):not([class*='slide'] > *)
-*tcid=$all
+*tcid=$all,reason=제휴링크
 auction.co.kr,gmarket.co.kr##.plcc_banner
 blog.naver.com,comic.naver.com##[class*='banner_area']
 seoul.co.kr,mule.co.kr,hiromi.fans##[class*='Ad']
@@ -315,7 +315,6 @@ search.dcinside.com##.right_content
 cafe.naver.com##+js(remove-class, disable-select, #ct)
 fmkorea.com##+js(set, link_url, '')
 gmarket.co.kr##+js(set, mouseRightButtonDisabled, noopFunc)
-ruliweb.com##+js(remove-class, ai_blind, #board_read)
 ||arca.live/static/assets/js/adult.min.js
 0db.co.kr###adblock_notice
 aagag.com#$#.la { position: absolute !important; left: -3000px !important; width: 60px !important; height: 20px !important; }
@@ -342,8 +341,6 @@ mlbpark.donga.com#@$#div[id^="SmartPhone_"][id$="_today"] .lists > li::before { 
 soomgo.com#%#(()=>{const f=window.fetch;window.fetch=(u,...a)=>typeof u=='string'&&u.includes('cdn.segment.com/v1/projects/')&&u.includes('/settings')?Promise.resolve(new Response('{"integrations":{}}',{status:200})):f(u,...a);const o=XMLHttpRequest.prototype.open,s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u,...a){this._u=u;return o.call(this,m,u,...a)};XMLHttpRequest.prototype.send=function(...a){if(typeof this._u=='string'&&this._u.includes('cdn.segment.com/v1/projects/')&&this._u.includes('/settings')){Object.defineProperties(this,{status:{value:200},readyState:{value:4},responseText:{value:'{"integrations":{}}'},response:{value:'{"integrations":{}}'}});this.onload&&this.onload();this.onreadystatechange&&this.onreadystatechange();return}s.apply(this,a)}})();
 sooplive.com#@%#//scriptlet('json-prune-xhr-response', 'data.adballoon', '', 'station/video/a/view')
 *$websocket,domain=bunny-frame.online
-||ublockdns.com^$doc
-||ublockorigin.com^$doc
 www.google.com##.MjjYud:has(a:matches-attr("href"="/^https?:\/\/[a-z]{12}\.(fit|live|my|shop|site|store|today|wiki)\/[a-z]{20,}/")):has([data-snhf])
 www.google.com##.MjjYud:has(a[href*=".auction/"], a[href*=".autos/"]):has([data-snhf])
 www.google.com##.MjjYud:has(a[href*=".bar/"], a[href*=".beauty/"], a[href*=".best/"], a[href*=".boats/"]):has([data-snhf])
