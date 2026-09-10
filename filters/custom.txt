@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.09.08
-! TimeUpdated: 2026-09-08T10:48:31+00:00
+! Version: 2026.09.10
+! TimeUpdated: 2026-09-10T20:32:21+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -43,6 +43,7 @@ tdgall.com,hygall.com##.admanager-row
 windowsforum.kr,seoul.co.kr,xportsnews.com,yonhapnewstv.co.kr,goodgag.net##.ad
 wowtv.co.kr,cafe.naver.com##[class*='Banner']
 *$script,third-party,domain=nimi.wiki
+/vue/component/common/banner_modal.vue
 3rd.supply##.h-hori-ad
 3rd.supply##.text-center:has(sp-common-adsense)
 [$domain=/^darkg[a-z0-9]*\.com/]###side-popup, #posterWrap, a[class*="banner"]
