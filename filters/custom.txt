@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.09.13
-! TimeUpdated: 2026-09-13T11:17:01+00:00
+! TimeUpdated: 2026-09-13T15:47:05+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -250,6 +250,7 @@ zod.kr##.app-mobile-only:has(> div > a[target] > img)
 ||*nestads.*
 ||ader.naver.com/*?c=m_$all,reason=파워링크
 ||ader.naver.com/v1/$all,reason=파워링크
+||api.hobos.studio/v1/ads$domain=xn--v69ak0xskm.com
 ||bokuennews.com/data/banner
 ||clink.kakao.com/sp/$all,reason=수익링크
 ||dvdprime.com/file/*/banner
