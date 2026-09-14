@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.09.13
-! TimeUpdated: 2026-09-13T15:47:05+00:00
+! Version: 2026.09.14
+! TimeUpdated: 2026-09-14T12:07:01+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -18,7 +18,7 @@
 *##+js(remove-class, topBanner--on, body)
 *##[target='_blank']:has([src*='/banner/']):not([title^='새']):not([class*='slide'] > *)
 *#$#button[data-banner-id] { mix-blend-mode: hue !important; }
-*tcid=$all,reason=제휴링크
+*tcid=$all
 auction.co.kr,gmarket.co.kr##.plcc_banner
 blog.naver.com,comic.naver.com##[class*='banner_area']
 seoul.co.kr,mule.co.kr,hiromi.fans##[class*='Ad']
@@ -97,6 +97,7 @@ dnews.co.kr##div[style^="text-align: center"][style*="z-index: 999"]
 doctornow.co.kr##div.flex.w-full:has(> div.relative, > ins.adsbygoogle)
 dschool.co.kr###modal-banner
 dschool.co.kr##[id="lean_overlay"]
+dt.co.kr##.horizon-ad
 dvdprime.com###ad_view_right1
 dvdprime.com##[id$='top_banner']
 dvdprime.com##[id^='ad_mobile']
@@ -230,11 +231,13 @@ teamblind.com##[href^='https://link.coupang.com/re/AFFSDP']
 teamblind.com##.topic-list.best > div.article:has(> [href^='https://link.coupang.com/re/'])
 teamblind.com##div.border-b:has(> div.flex > div[id^="infeed-home-"])
 teamblind.com##div.comment_area.wrap-comment[style='cursor: pointer;']
+terms.naver.com##div.ad-banner-area
 tiendeo.co.kr##section.justify-center:has([id^="div-gpt-ad-web"])
 tvseoul.kr##div[style*="width:360px"][style*="height:300px"]
 umrb.co.kr##ul.main_slider_area
 uppity.co.kr##.adrop-outer
 veritas-a.com##article.grid.body > div.clearfix:has(.ad-template)
+viva100.com##.banner_box
 wadiz.kr##[class^="MultiBoardAdBannerDisplay-"]
 welfarehello.com##[style^="--ad-frame-width-"]
 xtoon365.com##[class$='-ad']
@@ -248,15 +251,15 @@ zod.kr##.app-footer > div > nav[style*='height']
 zod.kr##.app-header-menu__content > div > [href^='https://zod.kr/go']
 zod.kr##.app-mobile-only:has(> div > a[target] > img)
 ||*nestads.*
-||ader.naver.com/*?c=m_$all,reason=파워링크
-||ader.naver.com/v1/$all,reason=파워링크
+||ader.naver.com/*c=m_$all
+||ader.naver.com/v1/$all
 ||api.hobos.studio/v1/ads$domain=xn--v69ak0xskm.com
 ||bokuennews.com/data/banner
-||clink.kakao.com/sp/$all,reason=수익링크
+||clink.kakao.com/sp/$all
 ||dvdprime.com/file/*/banner
 ||kamp.kakao.com^$app=com.kakao.talk
-||link.coupang.com/re/AFFHOME*subid=pointlink$all,reason=수익링크
-||link.coupang.com/re/AFFSDP*?subid=dynamicda$all,reason=수익링크
+||link.coupang.com/re/AFFHOME*subid=pointlink$all
+||link.coupang.com/re/AFFSDP*subid=dynamicda$all
 ||pandalive.co.kr^$document,domain=heye.kr
 ||player.bunny-frame.online/js/ad_fetcher.js
 ||red52.kr/ads
