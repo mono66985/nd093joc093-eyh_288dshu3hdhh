@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.09.17
-! TimeUpdated: 2026-09-17T03:57:00+00:00
+! TimeUpdated: 2026-09-17T11:11:45+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -18,7 +18,6 @@
 ##iframe[src*="//ad.adnmore.co.kr"]
 *##+js(remove-class, topBanner--on, body)
 *##[target='_blank']:has([src*='/banner/']):not([title^='새']):not([class*='slide'] > *)
-*#$#button[data-banner-id] { mix-blend-mode: hue !important; }
 *tcid=$all
 auction.co.kr,gmarket.co.kr##.plcc_banner
 blog.naver.com,comic.naver.com##[class*='banner_area']
@@ -41,7 +40,7 @@ rgr.kr,rgrong.net,te31.com###foot:style(height: 150px !important;)
 rgr.kr,rgrong.net,te31.com##div[style='position:relative;z-index:11;']
 ruliweb.com,ppomppu.co.kr,naver.com,daum.net,etoland.co.kr##[id$='_ad']
 tdgall.com,hygall.com##.admanager-row
-windowsforum.kr,seoul.co.kr,xportsnews.com,yonhapnewstv.co.kr,goodgag.net##.ad
+windowsforum.kr,seoul.co.kr,xportsnews.com,yonhapnewstv.co.kr,goodgag.net,dailycar.co.kr##.ad
 wowtv.co.kr,cafe.naver.com##[class*='Banner']
 /vue/component/common/banner_modal.vue
 3rd.supply##.h-hori-ad
@@ -86,10 +85,10 @@ coinpan.com##li:has(ins.adsbygoogle)
 coinpan.com##p > strong > span:has-text(AD):upward(p)
 community.rememberapp.co.kr##[alt="배너 광고 이미지"]
 crepe.cm##section.mx-auto.block:has(> a[href="https://takemm.com/?utm_source=web&utm_medium=display&utm_campaign=crepe_main"])
-dailypharm.com##div[class*="_banner"]
 dak.gg###venatus-container-top
 dak.gg##.ad[id="mobile-takeover"]
 damoang.net##.dm-card:has(#gam-index-top-damoang-banner-index)
+dailypharm.com##a:has(> [src*="vodcdn.dailypharm.com/new_dailypharm/banners"])
 danawa.com##.auto_product_list:has(> .icon__ad)
 daum.net##[data-slot-type="AD_BRANDING_STATION"]
 daum.net##[data-slot-type="DAUM_AD"]
@@ -110,6 +109,7 @@ dvdprime.com##[id^='ad_mobile']
 dvdprime.com##[id^='slot']
 ebs.co.kr##.ji_adban
 economist.co.kr##[class*="_ad"]
+econovill.com##div.banner_box
 edu.chosun.com##a:has(> [src*="edu.chosun.com/images/bn/"])
 edu.chosun.com##section:has(> [id^="AD_Main_"])
 encar.com##[class*="Banner_wrap"]
@@ -132,6 +132,7 @@ i-boss.co.kr##[class$="-bn"]:has(a[target="_blank"])
 ibric.org##.top-banner-wrap
 ikbc.co.kr##.banner
 iloa.gg##div.justify-center[class*="min-h-"]:has(> div.items-center:empty):not(:has(a))
+inews24.com##.inews-www-ad
 instiz.net##.view_top
 instiz.net##div[class^='hot_u']
 inven.co.kr##div[style="width: 100%; height: 250px"]:has(.ad-right2)
@@ -238,6 +239,7 @@ teamblind.com##.topic-list.best > div.article:has(> [href^='https://link.coupang
 teamblind.com##div.border-b:has(> div.flex > div[id^="infeed-home-"])
 teamblind.com##div.comment_area.wrap-comment[style='cursor: pointer;']
 terms.naver.com##div.ad-banner-area
+thinkpool.com##.banner_box
 tiendeo.co.kr##section.justify-center:has([id^="div-gpt-ad-web"])
 tvseoul.kr##div[style*="width:360px"][style*="height:300px"]
 umrb.co.kr##ul.main_slider_area
@@ -266,6 +268,7 @@ zod.kr##.app-mobile-only:has(> div > a[target] > img)
 ||bokuennews.com/data/banner
 ||clink.kakao.com/sp/$all
 ||dvdprime.com/file/*/banner
+||img.etoday.co.kr/web/eto_ad
 ||kamp.kakao.com^$app=com.kakao.talk
 ||link.coupang.com/re/AFFHOME*subid=pointlink$all
 ||link.coupang.com/re/AFFSDP*subid=dynamicda$all
@@ -292,6 +295,7 @@ gall.dcinside.com##.dc_all
 gall.dcinside.com##.dcmedia.content_box
 gall.dcinside.com##.ltr
 gall.dcinside.com##.r_dcmedia
+gall.dcinside.com##.rtbAlarmPopup.pop_wrap.alarm
 gall.dcinside.com##tr[class='ub-content ']
 inven.co.kr##.inven-float-alarm
 m.cafe.naver.com###articleFeedList
@@ -302,6 +306,7 @@ m.cafe.naver.com##.join_layer_wrap
 m.cafe.naver.com##.popular_toast_popup
 m.cafe.naver.com##.subscribe_layer_wrap
 m.dcinside.com###light_tipbox
+m.dcinside.com##.alarm-popup.roundtype.silbe-alarm
 m.dcinside.com##.outside-search-box
 m.dcinside.com##section.grid > .md-tit-box:has(> div > .daumtxt)
 m.naver.com###MM_AI_TAB_TOOLTIP
@@ -323,12 +328,12 @@ gmarket.co.kr##+js(set, mouseRightButtonDisabled, noopFunc)
 aagag.com#$#.la { position: absolute !important; left: -3000px !important; width: 60px !important; height: 20px !important; }
 cola16.app##+js(acis, decodeURIComponent, ABCDEFGHIJKLMNOPQRSTUVWXYZ)
 damoang.net##+js(nostif, bait_hidden)
-dcinside.com###gaejukimg
-dcinside.com###moveOverlay
+gall.dcinside.com###gaejukimg
 litomi.*#%#(()=>{"use strict";let t=1;const e=new Map,n=new WeakSet;window.__REACT_DEVTOOLS_GLOBAL_HOOK__={supportsFiber:!0,renderers:e,inject:n=>{const o=t++;return e.set(o,n),o},onCommitFiberRoot:(t,e)=>{const o=t=>{if(!t)return;const e=t.memoizedProps;if(e&&!n.has(t)){if("function"==typeof e.onAdClick){n.add(t);try{e.onAdClick()}catch(t){}}if("function"==typeof e.onResult){n.add(t);try{e.onResult({success:!0,earned:10})}catch(t){}}}o(t.child),o(t.sibling)};e&&e.current&&o(e.current)},onCommitFiberUnmount:()=>{},onPostCommitFiberRoot:()=>{}}})();
 m.fmkorea.com##+js(set, _make_power_link_identifier, noopFunc)
 m.fmkorea.com##script ~ div.bd_mobile.bd:matches-css(margin: /[0-5]px [0-5]px/):matches-css(padding: /[0-5]px/):remove()
 m.fmkorea.com##section.fmWidgetStyle2019.bd_mobile.bd:matches-css(margin: /[0-5]px [0-5]px/):matches-css(padding: /[0-5]px/):remove()
+m.dcinside.com###moveOverlay
 namu.wiki##div:has(img[data-doc]:not([data-doc^="/jump/"]):not([data-doc^="/w/"])):not(:has([id])), div:has(> div[id]:empty:only-child)
 oraksil.cc##+js(acis, onload, showAdblockMessage)
 postshare.co.kr##+js(set-cookie, ad_unlocked_timer_final_v2, true)
