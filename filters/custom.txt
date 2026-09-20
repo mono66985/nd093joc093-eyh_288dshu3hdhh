@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.09.20
-! TimeUpdated: 2026-09-20T10:51:20+00:00
+! TimeUpdated: 2026-09-20T15:38:51+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -39,8 +39,8 @@ rgr.kr,rgrong.net,te31.com###foot:style(height: 150px !important;)
 rgr.kr,rgrong.net,te31.com##div[style='position:relative;z-index:11;']
 ruliweb.com,ppomppu.co.kr,naver.com,daum.net,etoland.co.kr##[id$='_ad']
 seoul.co.kr,mule.co.kr,hiromi.fans##[class*='Ad']
-thinkpool.com,econovill.com,viva100.com##.banner_box
 tdgall.com,hygall.com##.admanager-row
+thinkpool.com,econovill.com,viva100.com##.banner_box
 windowsforum.kr,seoul.co.kr,xportsnews.com,yonhapnewstv.co.kr,goodgag.net,dailycar.co.kr##.ad
 wowtv.co.kr,cafe.naver.com##[class*='Banner']
 /vue/component/common/banner_modal.vue
