@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.09.27
-! TimeUpdated: 2026-09-27T04:15:28+00:00
+! Version: 2026.09.28
+! TimeUpdated: 2026-09-28T23:00:44+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -334,6 +334,7 @@ gmarket.co.kr##+js(set, mouseRightButtonDisabled, noopFunc)
 ||arca.live/static/assets/js/adult.min.js
 0db.co.kr###adblock_notice
 aagag.com#$#.la { position: absolute !important; left: -3000px !important; width: 60px !important; height: 20px !important; }
+avsee.is##+js(json-prune, adsEnabled, adsEnabled)
 cola16.app##+js(acis, decodeURIComponent, ABCDEFGHIJKLMNOPQRSTUVWXYZ)
 damoang.net##+js(nostif, bait_hidden)
 gall.dcinside.com###gaejukimg
