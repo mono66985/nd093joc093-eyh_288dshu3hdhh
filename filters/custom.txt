@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.09.29
-! TimeUpdated: 2026-09-29T04:47:52+00:00
+! TimeUpdated: 2026-09-29T12:20:25+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -195,6 +195,7 @@ munhwa.com###bottom-sticky
 munhwa.com##.top-banner-area
 musinsa.com##[href$="/main/musinsa/brand_ad"]
 namu.news##li:has(div[style*="min-height:100px"]):has(> div > div[id*="article-a"])
+nate.com##div.AdIbl
 nate.com##ul.type_thumb > li.commercial
 naver.com##.sa_empty_ad
 news.jtbc.co.kr##.MuiBox-root[radius="0"][style]:empty
@@ -270,6 +271,7 @@ zod.kr##.app-mobile-only:has(> div > a[target] > img)
 ||api.hobos.studio/v1/ads$domain=xn--v69ak0xskm.com
 ||asked-front.pages.dev/kakaoad
 ||bokuennews.com/data/banner
+||checkplus.co.kr/images/banner/service/AD
 ||clink.kakao.com/sp/$all
 ||dvdprime.com/file/*/banner
 ||img.etoday.co.kr/web/eto_ad
