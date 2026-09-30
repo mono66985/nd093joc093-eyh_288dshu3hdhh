@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.09.29
-! TimeUpdated: 2026-09-29T12:20:25+00:00
+! Version: 2026.09.30
+! TimeUpdated: 2026-09-30T21:58:16+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -118,6 +118,7 @@ edu.chosun.com##section:has(> [id^="AD_Main_"])
 encar.com##[class*="Banner_wrap"]
 encar.com##li > a[class*="RecommendQuick_link_quick__"][href^="https://automotive.encar.com/RealMedia/ads/"][target="_blank"]
 ez2pattern.kr##.sticky
+fc-info.com##.android-app-download-banner
 fc-info.com##div[class^='Venatus_']
 gall.dcinside.com##.gnb_list.clear > li:has(> [onclick])
 gall.dcinside.com##li[id^="reply_li_"]:has(p[class*='txt']:has-text(/^(https?:\/\/)[A-Za-z0-9]{2,10}(\.[a-z]{2,7}|\.co\.kr)(\/(?=.*[a-z])(?=.*[0-9])[A-Za-z0-9_]{5,9})$/):not(:has-text(/git|g2sh|img|tebin|sendanywhe|twitter|rentry|x\.com|youtu|ibb\.co|archive\.md|t\.me|streamable|dev/i))):style(opacity: 0.5 !important;)
