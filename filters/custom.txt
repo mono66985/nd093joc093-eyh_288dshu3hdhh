@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.10.01
-! TimeUpdated: 2026-10-01T04:44:55+00:00
+! Version: 2026.10.02
+! TimeUpdated: 2026-10-02T12:03:26+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -300,6 +300,7 @@ namu.wiki#%#!function(){const e=document.createElement("style");e.textContent=".
 /^https:\/\/[0-9a-z]{6,12}\.in\/[a-z.]{2,10}(\/[a-z]{2,10})?(\/[a-z]{2,10})?(\?[^ ]+)?$/$media,script,third-party,match-case
 !#endif
 arca.live##a:has(img[src*="/static/assets/images/karisuma-point"])
+avsee.is###hd_pop
 gall.dcinside.com##.dc_all
 gall.dcinside.com##.dcmedia.content_box
 gall.dcinside.com##.ltr
