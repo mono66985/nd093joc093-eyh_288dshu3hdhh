@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.10.02
-! TimeUpdated: 2026-10-02T12:03:26+00:00
+! Version: 2026.10.04
+! TimeUpdated: 2026-10-04T11:55:24+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -363,7 +363,8 @@ mlbpark.donga.com#@$#div[id^="SmartPhone_"][id$="_today"] .lists > li::before { 
 soomgo.com#%#(()=>{const f=window.fetch;window.fetch=(u,...a)=>typeof u=='string'&&u.includes('cdn.segment.com/v1/projects/')&&u.includes('/settings')?Promise.resolve(new Response('{"integrations":{}}',{status:200})):f(u,...a);const o=XMLHttpRequest.prototype.open,s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u,...a){this._u=u;return o.call(this,m,u,...a)};XMLHttpRequest.prototype.send=function(...a){if(typeof this._u=='string'&&this._u.includes('cdn.segment.com/v1/projects/')&&this._u.includes('/settings')){Object.defineProperties(this,{status:{value:200},readyState:{value:4},responseText:{value:'{"integrations":{}}'},response:{value:'{"integrations":{}}'}});this.onload&&this.onload();this.onreadystatechange&&this.onreadystatechange();return}s.apply(this,a)}})();
 sooplive.com#@%#//scriptlet('json-prune-xhr-response', 'data.adballoon', '', 'station/video/a/view')
 *$websocket,domain=bunny-frame.online
-www.google.com##.MjjYud:has(cite:contains(/(https?:\/\/)?([a-z]{12})\.(baby|cam|fit|link|live|my|shop|site|store|today|wiki)[\s\/›]+[a-z]{20,}/)):has([data-snhf])
+www.google.com##.MjjYud:has(a:matches-attr("href"="/^https?:\/\/[a-z]{12}\.(?!(?:ai|com|org|net|edu|dev|app)\b)[a-z]{2,7}\/[a-z]{20,}/")):has([data-snhf])
+www.google.com##.MjjYud:has(cite:contains(/(https?:\/\/)?([a-z]{12})\.(?!(?:ai|com|org|net|edu|dev|app)\b)[a-z]{2,7}[\s\/›]+[a-z]{20,}/)):has([data-snhf])
 www.google.com##.MjjYud:has(cite:has-text(/^https:\/\/[a-zA-Z0-9.-]+\.hu/)):has([data-snhf])
 www.google.com##.MjjYud:has(span[role="text"]:has-text(/^https:\/\/[a-zA-Z0-9.-]+\.hu/)):has([data-snhf])
 ||player.bunny-frame.online/js/ad_fetcher.js
