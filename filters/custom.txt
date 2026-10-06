@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.10.06
-! TimeUpdated: 2026-10-06T05:24:21+00:00
+! TimeUpdated: 2026-10-06T12:57:01+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -141,7 +141,9 @@ inven.co.kr##div[style="width: 100%; height: 250px"]:has(.ad-right2)
 jjtv.kr##div[style^="text-align: center"]:has(> iframe[src*="//ad.adnmore.co.kr/"])
 joongdo.co.kr##div.right_content > div[style^="text-align:center;padding-bottom:50px;min-height"]:has(> script[src])
 joongdo.co.kr##div.view-news-wrap div[style*="min-height:"]:has(> script[src])
-k-hentai.org##div[class]:has(> [style*="ad-background"])
+k-hentai.org###khReaderAdTag
+k-hentai.org##div.d-flex.justify-content-center[style*="100vh"]:has(> #khReaderAdParentTag)
+k-hentai.org##div[class]:has(> [style*="ad-background"]):not(:has(i))
 kgirls.net##.layout_pc_banner
 kgnews.co.kr##div[itemprop="articleBody"] > div[style^="clear:both;margin:0 auto;margin-bottom:"]
 khan.co.kr##[class^="ad-art-"]
@@ -176,7 +178,7 @@ m.ruliweb.com##aside.native_timeline_ad
 m.ruliweb.com##tr:has(.nbp_container)
 m.tf.co.kr##div[style*="height"]:has([id^="ADFRAME"])
 m.wowtv.co.kr##.container > div[style]
-maplescouter.com##div.justify-center:has([alt="boomback ad"])
+maplescouter.com##div.justify-center:has([alt$=" ad"])
 mbong.kr##.ink_slide
 mbong.kr##.right_banne
 mbong.kr##div:has(> a > img[alt$="배너"])
