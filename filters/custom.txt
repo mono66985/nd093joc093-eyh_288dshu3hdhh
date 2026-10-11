@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.10.11
-! TimeUpdated: 2026-10-11T04:38:47+00:00
+! TimeUpdated: 2026-10-11T12:17:47+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
