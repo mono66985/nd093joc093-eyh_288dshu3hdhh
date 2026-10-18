@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.10.17
-! TimeUpdated: 2026-10-17T15:09:39+00:00
+! Version: 2026.10.18
+! TimeUpdated: 2026-10-18T03:33:32+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -170,7 +170,6 @@ m.anewsa.com##div[style*="width:300px"]
 m.bobaedream.co.kr##div.cyber-ad-wrapper
 m.bobaedream.co.kr##div[style$='height:50px;']
 m.dcinside.com##.layer-bottom-popup
-m.dcinside.com##.menu-scroll-lst.swiper-wrapper > li.swiper-slide:nth-of-type(n+5)
 m.dcinside.com##.survey
 m.dcinside.com##.view-btm-con
 m.dcinside.com##li:not(.notice):has(> .detail-top-lnk)
