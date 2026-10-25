@@ -1,7 +1,7 @@
 ! Title: 1Hosts Xtra (DNS Delta Unique)
 ! Description: Deep cross-pruned against Base to isolate false positives.
-! Last updated: 2026-10-24 19:37:15
-! Rules: 649876
+! Last updated: 2026-10-25 19:51:14
+! Rules: 649883
 
 ||0.ag^
 ||0.ro^
@@ -63479,7 +63479,6 @@
 ||delfi.net^
 ||delib.org^
 ||deline.de^
-||delivr.ai^
 ||delkom.ru^
 ||dellco.ru^
 ||dells.net^
@@ -135248,7 +135247,6 @@
 ||prosejf.pl^
 ||prosims.ru^
 ||proski.pro^
-||prosopo.io^
 ||prospeo.io^
 ||prospre.io^
 ||prosto.com^
@@ -252419,7 +252417,6 @@
 ||padsims.site^
 ||padusers.com^
 ||padushop.net^
-||paerlib.tech^
 ||paesenews.it^
 ||pafilter.com^
 ||pafiporn.com^
@@ -281637,6 +281634,7 @@
 ||btxbjncip.com^
 ||btxo79jkg.com^
 ||bu-avtos63.ru^
+||bu2kak23b.com^
 ||bua03pqz1.com^
 ||bubblegame.cc^
 ||bubblemaps.io^
@@ -282760,6 +282758,7 @@
 ||cbwaterhub.ca^
 ||cbzzoedzn.com^
 ||cc-costco.com^
+||cc1ej6d0e.com^
 ||ccacademy.edu^
 ||ccaeducate.me^
 ||ccaglobal.com^
@@ -291457,6 +291456,7 @@
 ||flowtempl.com^
 ||flowtrecs.com^
 ||flowtrend.com^
+||flqa83yic.com^
 ||flrenters.com^
 ||flshuffle.com^
 ||fluffynet.dev^
@@ -294334,6 +294334,7 @@
 ||gteestore.com^
 ||gtevyhjiw.com^
 ||gtextreme.com^
+||gtfccewpo.com^
 ||gtitxeqxl.com^
 ||gtowizard.com^
 ||gtrailway.com^
@@ -299279,6 +299280,7 @@
 ||jrliming.blog^
 ||jrmimsgp.wiki^
 ||jrponline.com^
+||jrq39d1r8.com^
 ||jrruethe.info^
 ||jrschool.info^
 ||jrzuanshi.com^
@@ -313828,6 +313830,7 @@
 ||razzolink.com^
 ||rb-design.com^
 ||rb100.fitness^
+||rb51rh02h.com^
 ||rbcasting.com^
 ||rbdoutlet.com^
 ||rbernardo.com^
@@ -318772,6 +318775,7 @@
 ||soxgion.space^
 ||soxhubapp.com^
 ||soxon35th.com^
+||soy5c00zc.com^
 ||soyadlari.com^
 ||soyanews.info^
 ||soyunataza.es^
@@ -321939,7 +321943,6 @@
 ||thirtybet.com^
 ||this-is-me.nl^
 ||thiscity56.de^
-||thisisbud.com^
 ||thisisdax.com^
 ||thisisknit.ie^
 ||thisismess.io^
@@ -324243,6 +324246,7 @@
 ||unplugged.com^
 ||unpopbook.com^
 ||unpush.online^
+||unpw0czu7.com^
 ||unrvlddev.com^
 ||unseelie.wine^
 ||unsereunis.de^
@@ -325897,6 +325901,7 @@
 ||w-raydium.com^
 ||w124-board.de^
 ||w12evopay.com^
+||w2j4kdjma.com^
 ||w2p-tools.com^
 ||w3codetik.com^
 ||w3services.ca^
@@ -330261,6 +330266,7 @@
 ||4stateslaw.com^
 ||4uf8zoefyi.com^
 ||4unlockers.com^
+||4v6a7i3dkz.com^
 ||4wmiuiyd70.com^
 ||4womentalk.com^
 ||4x4proyect.com^
@@ -330390,6 +330396,7 @@
 ||69bookwang.com^
 ||69sexclips.com^
 ||6club-club.com^
+||6gvg5saail.com^
 ||6icm5nv54c.com^
 ||6indianxxx.com^
 ||6iwm4t7ty2.com^
@@ -330409,6 +330416,7 @@
 ||73zffowayx.com^
 ||747liveapp.com^
 ||75xiaoshuo.com^
+||766lnwfo7h.com^
 ||76cffb3fd2.com^
 ||76e2hr5928.com^
 ||76movies.click^
@@ -330423,6 +330431,7 @@
 ||77diamonds.com^
 ||77liveimjk.net^
 ||77liveimjk.top^
+||77v6jk9itk.com^
 ||78xiaoshuo.com^
 ||78yuuukl22.top^
 ||7900klubben.se^
@@ -330534,6 +330543,7 @@
 ||8jaxpj9e.click^
 ||8nbv7u2sds.com^
 ||8qyytgbm26.com^
+||8tbllquzr6.com^
 ||8thgateent.com^
 ||8x14khzwmi.com^
 ||8x81w5w6rf.com^
@@ -332602,6 +332612,7 @@
 ||anzhuowang.net^
 ||anzmac2009.org^
 ||ao0fk1cw4h.com^
+||ao5yygeilh.com^
 ||aoalliance.org^
 ||aoassocies.com^
 ||aodd-pumpen.de^
@@ -332901,6 +332912,7 @@
 ||aquoionjoue.ch^
 ||aqura-zero.com^
 ||aqvzcalmwx.com^
+||aqxh9x1o7m.com^
 ||arabchurch.com^
 ||arabe-xnxx.cam^
 ||arabgalopp.com^
@@ -340726,6 +340738,7 @@
 ||dandanzan.club^
 ||dandlroses.com^
 ||dandongbws.com^
+||dandywoken.com^
 ||danengdoor.com^
 ||daneprolidi.cz^
 ||daneshyari.com^
@@ -346638,7 +346651,6 @@
 ||g-t-static.com^
 ||g00nh2yl3k.cfd^
 ||g04backend.com^
-||g1386590345.co^
 ||g1584674680.co^
 ||g1584674681.co^
 ||g15wt3ci68.com^
@@ -352301,6 +352313,7 @@
 ||jcvehicles.org^
 ||jcvsystems.com^
 ||jcyunshang.com^
+||jd6wnmvacs.com^
 ||jdadelivers.co^
 ||jdagdealer.com^
 ||jdailymall.com^
@@ -355149,6 +355162,7 @@
 ||lfyingguan.com^
 ||lfzhongrun.com^
 ||lg-chatbot.com^
+||lg0lh2qfj4.com^
 ||lgatelecom.net^
 ||lgemembers.com^
 ||lghscoding.com^
@@ -362559,6 +362573,7 @@
 ||oxfordcorp.com^
 ||oxforddodge.ca^
 ||oxfordlarp.com^
+||oxggiwdp57.com^
 ||oxid-module.eu^
 ||oxide.computer^
 ||oxidomango.com^
@@ -367735,6 +367750,7 @@
 ||ruthtobias.com^
 ||ruto77naik.com^
 ||rutoken-tsk.ru^
+||ruvowe4xeo.com^
 ||ruwjewelry.com^
 ||ruysfashion.nl^
 ||ruzjoyeros.com^
@@ -368543,7 +368559,6 @@
 ||scriptcase.net^
 ||scriptcity.com^
 ||scriptfirm.com^
-||scriptintel.io^
 ||scriptoura.com^
 ||scripttema.com^
 ||scrollscan.com^
@@ -375986,6 +376001,7 @@
 ||ukdirectbd.com^
 ||ukdistance.com^
 ||ukepccheck.com^
+||ukew6uo7u1.com^
 ||ukhealmeds.com^
 ||ukigarden.club^
 ||ukihine.online^
@@ -379177,6 +379193,7 @@
 ||x3-reunion.com^
 ||x389vv4tr4.com^
 ||x39vi4jjt5.com^
+||x43slxjwzx.com^
 ||x50w6kwpd.bond^
 ||x7aee378xb.cfd^
 ||x86android.com^
@@ -396443,7 +396460,6 @@
 ||geogridgame.com^
 ||geohashing.site^
 ||geolink-hub.org^
-||geolocation.com^
 ||geologia365.com^
 ||geologypage.com^
 ||geolsocphil.com^
@@ -406518,7 +406534,6 @@
 ||moonkieshop.com^
 ||moonphase.today^
 ||moonpreneur.com^
-||moonshot-ai.com^
 ||moontimenow.com^
 ||moontimespy.com^
 ||moontontech.net^
@@ -428461,7 +428476,6 @@
 ||attalgrandly.cfd^
 ||attbellsouth.net^
 ||attbroadband.com^
-||attentionxyz.com^
 ||attentivtech.com^
 ||attica-group.com^
 ||atticahotels.net^
@@ -436704,6 +436718,7 @@
 ||erotiquepink.com^
 ||erovoyeurism.net^
 ||erppluscloud.com^
+||error-report.com^
 ||errorpennies.com^
 ||ersequipment.com^
 ||ershouhuoche.net^
@@ -442609,7 +442624,6 @@
 ||inmatureporn.com^
 ||inmindandbody.nl^
 ||inmobeniyork.com^
-||inmobi-choice.io^
 ||inmusicstore.com^
 ||innakosoriga.com^
 ||innaskincare.com^
@@ -459296,7 +459310,6 @@
 ||tango-textile.ru^
 ||tangobalance.com^
 ||tangodefuego.com^
-||tangooserver.com^
 ||tangotactical.it^
 ||tangshouquan.com^
 ||tankatuesday.com^
@@ -462099,7 +462112,6 @@
 ||usedpartsabc.com^
 ||usedphotopro.com^
 ||usedprinters.com^
-||usefulinfo24.com^
 ||useinsider.email^
 ||usemosaic.online^
 ||usenovalytic.com^
@@ -482943,7 +482955,6 @@
 ||lonuncavisto.info^
 ||loobygameshub.com^
 ||looduskalender.ee^
-||lookersandbox.com^
 ||lookpornvideo.com^
 ||lookwhocalled.com^
 ||loomanalytics.com^
@@ -500622,7 +500633,6 @@
 ||aprilmarieglow.com^
 ||aps-haustechnik.de^
 ||apteka-byrdenko.ru^
-||apycdtdlkjqka.site^
 ||apyqmsclrrslv.site^
 ||apzuzkathx.website^
 ||aquaclubdesign.com^
@@ -502738,6 +502748,7 @@
 ||brewingamerica.com^
 ||brewingforward.com^
 ||brewoktoto3d.space^
+||brianlarsonlaw.com^
 ||bricklylobbers.cfd^
 ||bricknermotors.net^
 ||bricoestornell.com^
@@ -523312,7 +523323,6 @@
 ||swift-services.net^
 ||swiftly-candle.ovh^
 ||swiftlycontent.net^
-||swiftstreamhub.com^
 ||swiftwolfcrest.top^
 ||swiitcreations.com^
 ||swimrecruiting.com^
@@ -623049,6 +623059,7 @@
 ||ok.f1688.ren^
 ||ok.fly88b.cc^
 ||open.wynk.in^
+||openx.tai.pl^
 ||ops.bpost.be^
 ||ox-i.zam.com^
 ||ox.e-card.bg^
@@ -623538,6 +623549,7 @@
 ||fsq.hm-qr.com^
 ||ftth.aina.net^
 ||fw.kkohls.com^
+||g.haluoha.com^
 ||g1.vivpsn.com^
 ||g4.vivpsn.com^
 ||g5.vivpsn.com^
@@ -624215,6 +624227,7 @@
 ||adm.kohils.com^
 ||adproxy.7tv.de^
 ||adrvw.moji.com^
+||ads.a2epub.com^
 ||ads.acesse.com^
 ||ads.boonex.com^
 ||ads.doodle.com^
@@ -628714,7 +628727,6 @@
 ||ffhggcv.page.link^
 ||ffhhah.yoogle.com^
 ||fi.xhonline.click^
-||fido.xhamster.com^
 ||fil.pornhub.press^
 ||fix.housecope.com^
 ||fixfun.pareci.net^
@@ -629393,7 +629405,6 @@
 ||track.adflare.com^
 ||track.audiobuy.cc^
 ||track.cooins.mobi^
-||track.getgist.com^
 ||track.mlsend2.com^
 ||track.polymob.com^
 ||track.seanear.com^
@@ -634260,7 +634271,6 @@
 ||app.risebuildings.com^
 ||app.showroomprive.com^
 ||app.theachieveapp.com^
-||app.thorrswap.finance^
 ||app.withutraining.com^
 ||app2.220cordncode.com^
 ||appdownload.youku.com^
@@ -648475,7 +648485,6 @@
 ||j2.6sc.co.edgekey.net^
 ||l.emails.kmart.com.au^
 ||l.m.tradiecore.com.au^
-||mcjs.prd.a.intuit.com^
 ||mg.e.mail.realtor.com^
 ||nj.h.bcsp2p.baidu.com^
 ||srv.sec.intl.miui.com^
@@ -649459,7 +649468,6 @@
 ||alb-jgcpzp8kg3u74oxzma.ap-southeast-1.alb.aliyuncs.com^
 ||alb-x8u0638k10wujn89dm.cn-shenzhen.alb.aliyuncsslb.com^
 ||3uynzemsiprbuk2ilfqy7l.images.enterprise.contentful.com^
-||4ced22ca066d4ca4a7726c9afff8c039.us-east-1.aws.found.io^
 ||iris-de-prod-azsc-v2-neu.northeurope.cloudapp.azure.com^
 ||ubi-static-website-hosting-prod.ubisoft.com.edgekey.net^
 ||wd-prod-cp-eu-north-1-fe.northeurope.cloudapp.azure.com^
@@ -649479,7 +649487,6 @@
 ||5f4ead78d8775ca78cd3d77354a267c4.eu.r2.cloudflarestorage.com^
 ||5inusf5q6ejf3atvghbhsxexje0tysyl.lambda-url.us-east-1.on.aws^
 ||5oy2nnjxatw6egeqhkwdcm76um0vvdig.lambda-url.us-east-1.on.aws^
-||7s26352ahbmvovt7xvxyyba3za0sskzf.lambda-url.us-east-1.on.aws^
 ||ad77s4uwghkkbg5vfyghm7xcvu0qoslc.lambda-url.us-east-1.on.aws^
 ||afcha2nmzsir4rr4zbta4tyy6e0fxjix.lambda-url.us-east-1.on.aws^
 ||afnv7trk42wcarrewqyhxvzhv40znpgt.lambda-url.us-east-1.on.aws^
