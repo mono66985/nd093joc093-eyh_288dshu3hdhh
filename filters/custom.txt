@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.10.25
-! TimeUpdated: 2026-10-25T20:30:45+00:00
+! Version: 2026.10.26
+! TimeUpdated: 2026-10-26T22:23:53+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -312,7 +312,6 @@ arca.live##a:has(img[src*="/static/assets/images/karisuma-point"])
 avsee.is###hd_pop
 gall.dcinside.com##.dc_all
 gall.dcinside.com##.dcmedia.content_box
-gall.dcinside.com##.ltr
 gall.dcinside.com##.r_dcmedia
 gall.dcinside.com##.rtbAlarmPopup.pop_wrap.alarm
 gall.dcinside.com##tr[class='ub-content ']
