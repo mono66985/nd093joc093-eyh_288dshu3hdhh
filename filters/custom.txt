@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.10.27
-! TimeUpdated: 2026-10-27T17:38:55+00:00
+! Version: 2026.10.28
+! TimeUpdated: 2026-10-28T22:18:26+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -63,7 +63,6 @@ aflnews.co.kr###layer-popups
 algumon.com##.bg-base-100.py-2.deal-row:has(> div[style*='250px'])
 algumon.com##[data-virtual-row-id*='-ad']
 algumon.com##div:has([data-tip^='파트너스'], ins):is(.card, .deal-2col)
-algumon.com##div[data-virtual-row-id]:has(> div.deal-feed-card > div.card-body span:has-text(작성자광고))
 arca.live##div.vrow.hybrid:has(.badge.category-badge)
 asiatoday.co.kr###ad-floating-wrapper
 asiatoday.co.kr##.ad_banner3
@@ -100,7 +99,6 @@ daum.net##[data-slot-type="DAUM_AD"]
 daum.net##div.inner_article div.ad_sch
 daum.net##slot-ad-sa
 dcinside.com##li:has(> [href*='https://ads.dcinside.com/'])
-dcinside.com##li[id^='comment_']:has(p[class*='txt']:has-text(/^(https?:\/\/)[A-Za-z0-9]{2,10}(\.[a-z]{2,7}|\.co\.kr)(\/(?=.*[a-z])(?=.*[0-9])[A-Za-z0-9_]{5,9})$/):not(:has-text(/git|g2sh|img|tebin|sendanywhe|twitter|rentry|x\.com|youtu|ibb\.co|archive\.md|t\.me|streamable|dev/i))):style(opacity: 0.5 !important;)
 ddaltube.com##+js(remove-attr, data-a, #dtube-player)
 ddaltube.com##.dtube-banner-grid, .vjs-video-ad-click-overlay, .player-banner-overlay > a.block
 diningcode.com##li:has(.PoiAdsSpacerList)
@@ -126,9 +124,7 @@ encar.com##li > a[class*="RecommendQuick_link_quick__"][href^="https://automotiv
 ez2pattern.kr##.sticky
 fc-info.com##[class$='-banner']
 fc-info.com##div[class^='Venatus']
-gall.dcinside.com##li[id^="reply_li_"]:has(p[class*='txt']:has-text(/^(https?:\/\/)[A-Za-z0-9]{2,10}(\.[a-z]{2,7}|\.co\.kr)(\/(?=.*[a-z])(?=.*[0-9])[A-Za-z0-9_]{5,9})$/):not(:has-text(/git|g2sh|img|tebin|sendanywhe|twitter|rentry|x\.com|youtu|ibb\.co|archive\.md|t\.me|streamable|dev/i))):style(opacity: 0.5 !important;)
 gangmom.kr##.banner-wrapper
-get*ads-*-du.a.run.app^
 gmarket.co.kr##.js-impressionable.box__head-ad
 health.chosun.com##.ad-main-top
 heykorean.com##div.ad-bx
@@ -282,8 +278,8 @@ zod.kr##.app-mobile-only:has(> div > a[target] > img)
 ||asked-front.pages.dev/kakaoad
 ||bokuennews.com/data/banner
 ||checkplus.co.kr/images/banner/service/AD
-||clink.kakao.com/sp/$all
 ||dvdprime.com/file/*/banner
+||get*ads-*-du.a.run.app^
 ||img.etoday.co.kr/web/eto_ad
 ||kamp.kakao.com^$app=com.kakao.talk
 ||link.coupang.com/re/AFFHOME*subid=pointlink$all
@@ -318,11 +314,8 @@ gall.dcinside.com##.rtbAlarmPopup.pop_wrap.alarm
 gall.dcinside.com##tr[class='ub-content ']
 inven.co.kr##.inven-float-alarm
 m.cafe.naver.com###articleFeedList
-m.cafe.naver.com##.CardWrap.home_popular_articles
 m.cafe.naver.com##.FloatingJoinButton
 m.cafe.naver.com##.join_layer_wrap
-m.cafe.naver.com##.popular_toast_popup
-m.cafe.naver.com##.subscribe_layer_wrap
 m.cafe.naver.com##[data-testid='home-feed']
 m.dcinside.com###light_tipbox
 m.dcinside.com##.alarm-popup.roundtype.silbe-alarm
@@ -382,7 +375,6 @@ www.google.com##.MjjYud:has(span[role="text"]:has-text(/^https:\/\/[a-zA-Z0-9.-]
 ||peertrk.com/api/live/report$domain=bunny-frame.online
 ||player.bunny-frame.online/js/ad_fetcher.js
 arca.live#%#(()=>{const N="nrx",S='a.notice[href*="/b/"] .vcol.col-ad>.badge.text-bg-success,a.notice[href*="/b/"] .vcol.col-id>b';document.documentElement.appendChild(Object.assign(document.createElement("style"),{textContent:`${S}{visibility:hidden;animation:${N} 1ms}@keyframes ${N}{to{}}`}));addEventListener("animationstart",e=>{if(e.animationName!==N)return;const g=/\/b\/([^/]+)/.exec(e.target.closest("a.notice").pathname)?.[1];if(g){e.target.textContent=g;e.target.style.visibility="visible"}},true)})();
-dcinside.com##.imgwrap > .num:style(opacity: 0.6 !important;)
 dmm.co.jp#%#//scriptlet('trusted-set-cookie-reload', 'ckcy_remedied_check', 'ec_mrnhbtk', '1year', '/', '.dmm.co.jp')
 gall.dcinside.com##+js(aeld, contextmenu, , elements, video)
 gall.dcinside.com##+js(remove-attr, controlslist, video, stay)
