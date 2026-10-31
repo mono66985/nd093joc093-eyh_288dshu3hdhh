@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.10.30
-! TimeUpdated: 2026-10-30T22:00:27+00:00
+! Version: 2026.10.31
+! TimeUpdated: 2026-10-31T11:50:53+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -96,7 +96,6 @@ damoang.net##.dm-ad-row
 damoang.net##.dm-card:has(> ad-slot-empty)
 daum.net##[data-slot-type="AD_BRANDING_STATION"]
 daum.net##[data-slot-type="DAUM_AD"]
-daum.net##div.article_middle_ad
 daum.net##div.inner_article div.ad_sch
 daum.net##slot-ad-sa
 dcinside.com##li:has(> [href*='https://ads.dcinside.com/'])
