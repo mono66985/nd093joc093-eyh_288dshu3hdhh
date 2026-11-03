@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.11.02
-! TimeUpdated: 2026-11-02T14:59:47+00:00
+! Version: 2026.11.03
+! TimeUpdated: 2026-11-03T00:40:55+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -87,7 +87,6 @@ coinpan.com##li:has(ins.adsbygoogle)
 coinpan.com##p > strong > span:has-text(AD):upward(p)
 community.rememberapp.co.kr##[alt="배너 광고 이미지"]
 crepe.cm##section.mx-auto.block:has(> a[href="https://takemm.com/?utm_source=web&utm_medium=display&utm_campaign=crepe_main"])
-dacgle.com##div.promotion_bn
 dailypharm.com##a:has(> [src*="vodcdn.dailypharm.com/new_dailypharm/banners"])
 dak.gg###venatus-container-top
 dak.gg##.ad[id="mobile-takeover"]
