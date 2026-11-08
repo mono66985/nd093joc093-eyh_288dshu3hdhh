@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.11.08
-! TimeUpdated: 2026-11-08T04:59:10+00:00
+! TimeUpdated: 2026-11-08T12:55:05+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -172,6 +172,7 @@ m.dcinside.com##.layer-bottom-popup
 m.dcinside.com##.survey
 m.dcinside.com##.view-btm-con
 m.dcinside.com##li:not(.notice):has(> .detail-top-lnk)
+m.g-enews.com##[class^="clsgenews_tdn_moadd"]
 m.nate.com###myarea_ad
 m.nate.com##a[href^="https://cyad1.nate.com/click.kti/mnate/"]
 m.pann.nate.com##section > div[style^="width: 100%; min-height: 100px;"]:has(> iframe[title="광고"])
@@ -348,6 +349,8 @@ avsee.is##+js(json-prune, adsEnabled, adsEnabled)
 cola16.app##+js(acis, decodeURIComponent, ABCDEFGHIJKLMNOPQRSTUVWXYZ)
 damoang.net##+js(nostif, bait_hidden)
 gall.dcinside.com###gaejukimg
+k-hentai.org##+js(no-fetch-if, /pagead2\.googlesyndication\.com/)
+k-hentai.org#%#(()=>{const d=Object.getOwnPropertyDescriptor(HTMLImageElement.prototype,'src');Object.defineProperty(HTMLImageElement.prototype,'src',{...d,set(v){return d.set.call(this,/^https:\/\/googleads\.g\.doubleclick\.net\/favicon\.ico(?:\?|$)/.test(String(v))?'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAC0lEQVR42mNgQAcAABIAAeRVjecAAAAASUVORK5CYII=':v)}})})();
 litomi.cc#%#(()=>{"use strict";let t=1;const e=new Map,n=new WeakSet;window.__REACT_DEVTOOLS_GLOBAL_HOOK__={supportsFiber:!0,renderers:e,inject:n=>{const o=t++;return e.set(o,n),o},onCommitFiberRoot:(t,e)=>{const o=t=>{if(!t)return;const e=t.memoizedProps;if(e&&!n.has(t)){if("function"==typeof e.onAdClick){n.add(t);try{e.onAdClick()}catch(t){}}if("function"==typeof e.onResult){n.add(t);try{e.onResult({success:!0,earned:10})}catch(t){}}}o(t.child),o(t.sibling)};e&&e.current&&o(e.current)},onCommitFiberUnmount:()=>{},onPostCommitFiberRoot:()=>{}}})();
 m.dcinside.com###moveOverlay
 m.fmkorea.com##+js(set, _make_power_link_identifier, noopFunc)
