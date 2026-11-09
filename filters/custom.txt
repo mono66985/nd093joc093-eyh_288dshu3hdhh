@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.11.08
-! TimeUpdated: 2026-11-08T12:55:05+00:00
+! Version: 2026.11.09
+! TimeUpdated: 2026-11-09T05:08:35+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -196,8 +196,8 @@ mimint.co.kr##.index-right-banner
 mimint.co.kr##.list_row:has(div[data-ad-mode])
 mk.co.kr##div[data-ad-render-container]
 mk.co.kr##li.native-ad-list-item
-mlbpark.donga.com##[class^='coupang']
 mlbpark.donga.com##[class*='naver_place']
+mlbpark.donga.com##[class^='coupang']
 mlbpark.donga.com##ul.sub_lists_today.lists > li.items:nth-of-type(6)::before
 mule.co.kr##[class*='-ad-']
 munhwa.com###bottom-sticky
@@ -366,8 +366,8 @@ shipdago.com##+js(set-attr, ins.adsbygoogle, data-adsbygoogle-status, true)
 shipdago.com,ez2pattern.kr,quizbubble.kr##+js(no-fetch-if, adsbygoogle.js)
 ||maxmovie.com/_next/static/chunks/framework.aa400efa16f23e2b0cfe.js
 $@$link[rel="manifest"]
-bbs.ruliweb.com##.right_side_wrapper.scrolled-down .right_best_list:style(height: auto !important;)
 bbs.ruliweb.com##.right_side_wrapper.scrolled-down .hit_list:style(height: auto !important;)
+bbs.ruliweb.com##.right_side_wrapper.scrolled-down .right_best_list:style(height: auto !important;)
 ktmmobile.com#@%#//scriptlet('set-constant', 'mainBottomBanner', 'noopFunc')
 m.fmkorea.com#@$?#*.bd.bd_mobile:not(:has(#bd_capture ~ #comment)):has(form[action="./"]:matches-css(height: auto)) { remove: true; }
 mlbpark.donga.com#@$#div[id^="SmartPhone_"][id$="_today"] .lists > li::before { padding-top: 0px !important; border-bottom: none !important; }
@@ -380,11 +380,11 @@ www.google.com##.MjjYud:has(a:matches-attr("href"="/^https?:\/\/[a-z]{12}\.(?!(?
 www.google.com##.MjjYud:has(cite:contains(/(https?:\/\/)?([a-z]{12})\.(?!(?:ai|com|org|net|edu|dev|app)\b)[a-z]{2,7}[\s\/›]+[a-z]{20,}/)):has([data-snhf])
 www.google.com##.MjjYud:has(cite:has-text(/^https:\/\/[a-zA-Z0-9.-]+\.hu/)):has([data-snhf])
 www.google.com##.MjjYud:has(span[role="text"]:has-text(/^https:\/\/[a-zA-Z0-9.-]+\.hu/)):has([data-snhf])
-||insightjs.com^$all
-||tracker.bunny-frame.online/c
 ||bunny-video.com/js/ad_fetcher.js
-||toss-eventmall.com^$all,reason=피싱링크임시
+||insightjs.com^$all
 ||toss-eventmall.com^$all
+||toss-eventmall.com^$all,reason=피싱링크임시
+||tracker.bunny-frame.online/c
 ||tw.mfcc.co.kr^$all,reason=Android콜게이트제휴광고리다이렉트
 arca.live#%#(()=>{const N="nrx",S='a.notice[href*="/b/"] .vcol.col-ad>.badge.text-bg-success,a.notice[href*="/b/"] .vcol.col-id>b';document.documentElement.appendChild(Object.assign(document.createElement("style"),{textContent:`${S}{visibility:hidden;animation:${N} 1ms}@keyframes ${N}{to{}}`}));addEventListener("animationstart",e=>{if(e.animationName!==N)return;const g=/\/b\/([^/]+)/.exec(e.target.closest("a.notice").pathname)?.[1];if(g){e.target.textContent=g;e.target.style.visibility="visible"}},true)})();
 dmm.co.jp#%#//scriptlet('trusted-set-cookie-reload', 'ckcy_remedied_check', 'ec_mrnhbtk', '1year', '/', '.dmm.co.jp')
