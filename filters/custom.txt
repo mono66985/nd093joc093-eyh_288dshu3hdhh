@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.11.11
-! TimeUpdated: 2026-11-11T05:10:09+00:00
+! TimeUpdated: 2026-11-11T13:44:15+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -172,6 +172,7 @@ m.dcinside.com##.layer-bottom-popup
 m.dcinside.com##.survey
 m.dcinside.com##.view-btm-con
 m.dcinside.com##li:not(.notice):has(> .detail-top-lnk)
+m.fmkorea.com##div[style*='display:block !important;visibility:hidden;height']:style(min-height:0!important;max-height:0!important)
 m.g-enews.com##[class^="clsgenews_tdn_moadd"]
 m.nate.com###myarea_ad
 m.nate.com##a[href^="https://cyad1.nate.com/click.kti/mnate/"]
