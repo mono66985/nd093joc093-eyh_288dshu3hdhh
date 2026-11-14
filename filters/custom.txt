@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
-! Version: 2026.11.13
-! TimeUpdated: 2026-11-13T14:06:32+00:00
+! Version: 2026.11.14
+! TimeUpdated: 2026-11-14T22:04:10+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -107,6 +107,7 @@ dispatch.co.kr##article.page-post-font.page-post-article > div:has(iframe)
 dispatch.co.kr##article.page-post-font.page-post-article > iframe
 dnews.co.kr##div[style^="text-align: center"][style*="z-index: 999"]
 doctornow.co.kr##div.flex.w-full:has(> div.relative, > ins.adsbygoogle)
+donga.com###article_body > div.view_center
 donga.com##div.right_wingad
 dschool.co.kr###modal-banner
 dschool.co.kr##[id="lean_overlay"]
@@ -198,6 +199,7 @@ mimint.co.kr##.index-right-banner
 mimint.co.kr##.list_row:has(div[data-ad-mode])
 mk.co.kr##div[data-ad-render-container]
 mk.co.kr##li.native-ad-list-item
+mksports.co.kr##div.bn_wrap
 mlbpark.donga.com##[class*='naver_place'], [class^='coupang']
 mlbpark.donga.com##ul.sub_lists_today.lists > li.items:nth-of-type(6)::before
 mule.co.kr##[class*='-ad-']
