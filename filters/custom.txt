@@ -1,7 +1,7 @@
 ! Title: Custom AdGuard Filter (Optimized)
 ! Description: Rule-based filtering (safe)
 ! Version: 2026.11.21
-! TimeUpdated: 2026-11-21T06:02:38+00:00
+! TimeUpdated: 2026-11-21T18:48:43+00:00
 ! Expires: 1 days
 ! Homepage: None
 !
@@ -119,6 +119,7 @@ donga.com##div.right_wingad
 dschool.co.kr###modal-banner
 dschool.co.kr##[id="lean_overlay"]
 dt.co.kr##.horizon-ad
+dt.co.kr##.top-banner-area
 dvdprime.com###ad_view_right1
 dvdprime.com##[id$='top_banner']
 dvdprime.com##[id^='ad_mobile']
@@ -150,7 +151,7 @@ ichannela.com##div.interest_news_list_side_m:not(:has(a))
 ikbc.co.kr##.banner
 iloa.gg##div.justify-center[class*="min-h-"]:has(> div.items-center:empty):not(:has(a))
 imaeil.com##iframe[src*="//adguru.kr"]
-imbc.com##a[href^="https://sepay.org/"]:has(> img[alt$="광고AD"])
+imbc.com##a[href^="https://sepay.org"]:has(> img[alt$="광고AD"])
 inews24.com##.inews-www-ad
 instiz.net##.view_top
 instiz.net##div[class^='hot_u']
@@ -179,6 +180,7 @@ korea.com##div[class*="banner"]
 koreatimes.com###wrapper > div.s-popup
 koreatimes.com##div.banner-box
 koreatimes.com##div.banner-wrap
+kpanews.co.kr##iframe[title="광고"][src^="https://svc.kpanews.co.kr/banner/embed"]
 kshop.co.kr##div[class^="LoginPage_simpleLogin"]:has(> span[class^="LoginPage_advertising"])
 kyeongin.com##.horizon-ad
 lawtimes.co.kr###top-banner
@@ -248,6 +250,7 @@ outstanding.kr##.Toastify__toast:has([id^="banner_"])
 paxnet.co.kr##.stock-ad
 paxnet.co.kr##[class^="dv-com-m"]
 pay.naver.com##div[class^='BottomAds_article']
+peterpanz.com###simplePhoneLogin[href^="https://sepay.org"]
 pixiv.net##div.banner-ad-footer-scale
 pizzaalvolo.co.kr##div[style="width: 100%; max-width: 340px; height: 55px; min-height: 55px; margin: auto; background-color: rgb(249, 66, 58); flex-direction: row; justify-content: center; gap: 10px; align-items: center; border-radius: 30px;"]
 postshare.co.kr##div:has(> a > img[src*="/images/banner/"])
@@ -287,6 +290,7 @@ teamblind.com##div.comment_area.wrap-comment[style='cursor: pointer;']
 teamblind.com##ul.tag-actions
 terms.naver.com##div.ad-banner-area
 tiendeo.co.kr##section.justify-center:has([id^="div-gpt-ad-web"])
+tplusmobile.com##div.login-wrap button[onclick*="https://sepay.org"]
 tvseoul.kr##div[style*="width:360px"][style*="height:300px"]
 umrb.co.kr##ul.main_slider_area
 uppity.co.kr##.adrop-outer
@@ -299,6 +303,7 @@ wmpoplus.com##button.simple:has(> span.ad)
 wooriilbo.com##div[style$="width:360px;height:320px;"]
 xtoon365.com##[class$='-ad']
 yakup.com##[class*="_banner_con"]:has([href*="clickBanner"])
+yes24.com##a.btn_social.adOn
 yna.co.kr###container > div.aside-top-bnr01
 yonhapnewstv.co.kr##.main-banner-area
 yonhapnewstv.co.kr##.view-ad-center
@@ -329,7 +334,9 @@ yozm.wishket.com##[data-testid^="advertisement-"]
 ||pandalive.co.kr^$document,domain=heye.kr
 ||red52.kr/ads
 ||shortformstats.kakao.com^$app=com.kakao.talk
+||static.dt.co.kr/js/lib/sscad.min.js
 ||storage1.ilyo.co.kr/contents/banner/images
+||svc.kpanews.co.kr/banner/embed
 ||thumb.kakaocdn.net^$app=com.kakao.talk
 ||trillion.toss.im^
 !#if (adguard_app_ios || adguard_ext_safari) && !adguard_app_mac
